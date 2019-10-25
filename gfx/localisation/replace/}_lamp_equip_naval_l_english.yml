@@ -1,0 +1,111 @@
+﻿l_english:
+
+ #Nazi Germany
+ GER_heavy_cruiser_3:0 "D Class"
+ GER_heavy_cruiser_3_desc:0 "The D-class were a pair of cruisers. The ships were improved versions of the preceding Deutschland-class cruisers. They were intended to counter a new French naval construction program. Displacement increased to 20,000 t, but Hitler allowed only increases to armor, prohibiting additions to the ships' main battery. Only one of the two ships was laid down, but it was canceled less than five months after the keel was laid. It was determined that the designs should be enlarged to counter the new French Dunkerque-class ships. The construction contracts for both ships were superseded by the Scharnhorst-class battleships."
+ #GER_heavy_cruiser_3:0 "D级"
+ #GER_heavy_cruiser_3_desc:0 "D级是一对姊妹巡洋舰，该舰是前级德意志级巡洋舰的升级型，她们原本是用来对抗法国的新造船计划的。该级舰艇的排水量达到了20,000吨，但是希特勒只允许增强其装甲，却不允许增强其主炮。两艘舰艇中只有一艘开始建造，但是在铺设龙骨后不到五个月就取消建造了。这是因为她们被要求扩大设计，以便对抗法国新的敦刻尔克级战列舰。两艘船的建造工作都被沙恩霍斯特级战列舰所取代。"
+ GER_battleship_1:0 "Bayern Class"
+ GER_battleship_1_desc:0 "The Bayern class was a class of four super-dreadnought battleships built by the German Kaiserliche Marine during WWI. The class comprised Bayern, Baden, Sachsen, and Württemberg. Only Baden and Bayern were completed, due to shipbuilding priorities changing as the war dragged on. It was determined that U-boats were more valuable to the war effort, and so work on new battleships was slowed and ultimately stopped altogether. As a result, Bayern and Baden were the last battleships completed by the Kaiserliche Marine during WWI."
+ #GER_battleship_1:0 "巴伐利亚级"
+ #GER_battleship_1_desc:0 "巴伐利亚级是帝国海军在一战期间建造的一级四艘超级无畏舰。该级军舰包括巴伐利亚号、巴登号、萨克森号与符腾堡号。由于随着战争的进行，舰船建造优先顺序的改变，只有巴登号与巴伐利亚号建造完成。因为U艇对战争的贡献更大，因此新战舰的建设被决定放缓，以至于最终完全停了下来。巴伐利亚号与巴登号也因此成为了帝国海军在一战期间最后完成的战列舰。"
+ GER_carrier_2:0 "Jade Class"
+ GER_carrier_2_desc:0 "The Jade class comprised a pair of passenger ships intended to be converted into auxiliary aircraft carriers. The two ships were launched as Gneisenau and Potsdam in 1935. After the outbreak of war, the ships were requisitioned by the Kriegsmarine as transports, and in May 1942, plans were drawn up to convert them into aircraft carriers. The ships were not identical, but were similar enough in size to allow identical outfitting."
+ #GER_carrier_2:0 "亚德河级"
+ #GER_carrier_2_desc:0 "亚德河级包含了两艘原本打算改装成辅助航母的客船。这两艘船在1935年以格奈森瑙号、波茨坦号为名开始运行。战争爆发后，德国海军征用这两艘船作为运输船，并于1942年5月计划将其改装为航空母舰。这两艘船其实完全不同，但是她们尺寸相似，可以安装相同的装备。"
+ 
+ #USSR
+ #SOV_destroyer_3:0 "Project 35"
+ #SOV_destroyer_3_desc:0 "Project 35 is a “large” destroyer with universal artillery, designed in 1939–1941 for the Soviet Navy as a part of the “Ten-Year Plan for the Construction of Navy Ships” (1938–1947). This destroyer project was developed under the influence of the newest foreign ships of this class in order to achieve better seaworthiness, range and survivability in comparison with the destroyers of the projects 7 and 7-U."
+ #SOV_destroyer_3:0 "35工程"
+ #SOV_destroyer_3_desc:0 "35工程是一款苏联海军在1939年至1941年设计的装备有通用火炮的“大型”驱逐舰，作为“海军建设十年计划”（1938-1947）的一部分。该型驱逐舰是受外国最新同级别舰艇的影响发展起来的，其目的是与7号工程及7U工程驱逐舰相比，拥有更好的适航性、航程以及生存能力。"
+ #SOV_destroyer_4:0 "Project 40"
+ #SOV_destroyer_4_desc:0 "Project 40 is a destroyer with universal artillery of the main caliber, placed in three turrets, which was designed in 1942-1945 for the Soviet Navy. This project was created taking into account the experience of the Second World War, and in comparison with previous projects of destroyers (projects 30 and 35) should have improved seaworthiness and new equipment and weapons. The technical task of the Project 40 demanded creation of a "big destroyer for ocean service" to use it on Pacific and Arctic theaters of war."
+ #SOV_destroyer_4:0 "40工程"
+ #SOV_destroyer_4_desc:0 "40工程是苏联海军在1942至1945年设计的一款驱逐舰，使用三个炮塔搭载主口径通用火炮。该项目考虑到了二战中的经验，相比于之前的计划（30和35）提升了适航性、新装备及武器。40工程的的技术任务是建造一艘“大洋大型驱逐舰”，以便用于太平洋和北冰洋战场。"
+ #SOV_light_cruiser_2:0 "Project 28"
+ #SOV_light_cruiser_2_desc:0 "This is a light cruiser which was the development of the ships of the Kirov Class cruisers (Project 26). From the prototype, the cruiser was distinguished by its large size, significantly enhanced protection and rapid-fire artillery of smaller caliber. Design development was cancelled after introduction of technical task for the new type light cruiser (Project 68). "
+ #SOV_light_cruiser_2:0 "28工程"
+ #SOV_light_cruiser_2_desc:0 "这是一艘由基洛夫级（26工程）发展而来的轻巡洋舰。从原型来看，该巡洋舰的特点是大尺寸、显著增强的防护以及小口径速射炮。该设计在新一型轻巡洋舰的技术任务（68工程）采用后被取消了。"
+ 
+ #USA
+ USA_battleship_4:0 "Illinois Class"
+ USA_battleship_4_desc:0 "This is a hypothetical battleship. The Illinois Class continued with the design and role defined by the Iowa Class. It maintained speed and armament over armor. The Illinois Class increased the number of 16"/50 caliber guns from 9 to 12 while it also improved boilers and machinery in order to provide more efficient high cruise speeds. Like the Montana Class, initial designs included four 4 6" guns dual turrets, but this was reverted to the dual purpose 5" twin turret emplacements to maximize AA capabilities."
+ #USA_battleship_4:0 "伊利诺伊级"
+ #USA_battleship_4_desc:0 "这是一艘假想的战列舰。伊利诺伊级延续了依阿华级的设计和定位。该舰维持装甲的同时提升了航速与武器。伊利诺伊级将16”/50口径的火炮数量从9个提升至12个，同时也改良了锅炉和机械用以提供更高效的巡航速度。像蒙大拿级那样，最初她被设计成装载四个4 6”口径火炮的双联炮塔，但最后恢复成5”高平两用双联炮塔炮位以最大化防空能力。"
+ 
+ USA_SH_battleship_1:0 "Montana Class"
+ USA_SH_battleship_1_desc:0 "The Montana Class was bigger and more armored than the Iowa Class, sacrificing speed to accommodate the increase. Its main armament of 12 x 18"/50 caliber guns and with the latest fire control system the Montana's firepower will be unmatched. Initial designs included 6" guns, but this was changed to return to the dual purpose 5" twin turret emplacements."
+ #USA_SH_battleship_1:0 "蒙大拿级"
+ #USA_SH_battleship_1_desc:0 "同依阿华级相比，蒙大拿级更加庞大，并拥有更多的装甲，但同时也牺牲了速度以适应这种改变。她的主武器是12x18"/50口径火炮，其配备的最新火控系统使得蒙大拿级的火力无人能敌。最初的设计包括了6"火炮，但后来被替换回了高平两用5"双联炮台炮位。"
+ USA_SH_battleship_2:0 "Design BB-65-8"
+ USA_SH_battleship_2_desc:0 "This is a hypothetical super-heavy battleship. BB-65-8 is originally an early blue print of Montana Class, with top-tier performence in design. Weighed 67,000 in tonnage, it has a reletively higher speed, 12 main guns and heavy protection. However its enormous size got it cancelled along with the cancellation of new navigation locks in the Panama Canal. Now with the war escalated, this blue print has came to the attention of US Navy once again."
+ #USA_SH_battleship_2:0 "BB-65-8设计方案"
+ #USA_SH_battleship_2_desc:0 "这是一艘假想的超重型战列舰。BB-65-8原本是蒙大拿级的一个早期设计方案，拥有顶级的性能。她的吨位达到了67,000吨，拥有较高的航速、12门主炮以及厚重的装甲。然而由于体积过于庞大，随着巴拿马运河新船闸建设的取消，她也跟着取消了。如今随着战事的吃紧，这个设计方案再次引起了美国海军的注意。"
+
+ #UK
+ ENG_light_cruiser_4:0 "Neptune Class"
+ ENG_light_cruiser_4_desc:0 "The Neptune class was a proposed class of cruisers planned for the British Royal Navy in the latter years of the Second World War. They were large ships which were to be armed with twelve 6-inch main guns and with twelve 4.5-inch dual purpose guns. While five ships of the class were planned in 1944, they were cancelled following the end of the war, before construction could begin."
+ #ENG_light_cruiser_4:0 "海王星级"
+ #ENG_light_cruiser_4_desc:0 "海王星级是英国皇家海军在二战后期计划的一级巡洋舰。她们是装备有十二门6英寸主炮及十二门4.5英寸高平两用炮的大型舰艇。虽然1944年计划建造5艘该级舰艇，但它们都因战争结束而在开始建造前就被取消了。"
+ 
+ #Commonwealth
+ CAN_destroyer_1:0 "Saguenay Class"
+ CAN_destroyer_1_desc:0 "Saguenay and her sister Skeena were the first ships specifically built for the RCN. They were similar to the British A class destroyer. They were built in England, commissioned into the RCN in 1931."
+ #CAN_destroyer_1:0 "塞格奈级"
+ #CAN_destroyer_1_desc:0 "塞格奈以及她的姊妹舰斯基纳是为加拿大皇家海军特别建造的第一批舰艇。她们同英国的A级驱逐舰很相似。她们是在英格兰建造的，并在1931年委托给加拿大海军。"
+ CAN_light_cruiser_4:0 "Neptune Class"
+ CAN_light_cruiser_4_desc:0 "The Neptune class was a proposed class of cruisers planned for the British Royal Navy in the latter years of the Second World War. They were large ships which were to be armed with twelve 6-inch dual-purpose guns and with a heavy secondary armament. While five ships of the class were planned in 1944, they were cancelled following the end of the war, before construction could begin."
+ #CAN_light_cruiser_4:0 "海王星级"
+ #CAN_light_cruiser_4_desc:0 "海王星级是英国皇家海军在二战后期计划的一级巡洋舰。她们是装备有十二门6英寸主炮及十二门4.5英寸高平两用炮的大型舰艇。虽然1944年计划建造5艘该级舰艇，但它们都因战争结束而在开始建造前就被取消了。"
+ AST_destroyer_2:0 "Arunta Class"
+ AST_destroyer_2_desc:0 "Arunta, Bataan, Warramunga were three Tribal-class destroyers ordered for the RAN. Originally conceived during design studies for a light fleet cruiser, the Tribals evolved into fast, powerful destroyers, with greater emphasis on guns over torpedoes than previous destroyers, in response to new designs by Japan, Italy, and Germany."
+ #AST_destroyer_2:0 "阿兰达人级"
+ #AST_destroyer_2_desc:0 "阿兰达人、巴丹人、瓦拉蒙加人是澳大利亚皇家海军订购的三艘部落级巡洋舰，部落级最初出自是从一支轻型巡洋舰队的设计研究，并进化成了高速、强力的驱逐舰，为了响应德意日三国的新设计，该舰比以前的驱逐舰更注重鱼雷武器。"
+ AST_light_cruiser_2:0 "Sydney Class"
+ AST_light_cruiser_2_desc:0 "Sydney, Perth and Hobart, named after the Australian cities, were three modified Leander Class light cruisers operated by the RAN. They were also the last three ships of the class. "
+ #AST_light_cruiser_2:0 "悉尼级"
+ #AST_light_cruiser_2_desc:0 "以澳大利亚城市悉尼命名的悉尼号、帕斯号以及霍巴特号，是澳大利亚皇家海军的三艘经现代化改装的利安德级轻巡洋舰。她们也是该级的最后三艘舰艇。"
+ AST_light_cruiser_4:0 "Neptune Class"
+ AST_light_cruiser_4_desc:0 "The Neptune class was a proposed class of cruisers planned for the British Royal Navy in the latter years of the Second World War. They were large ships which were to be armed with twelve 6-inch dual-purpose guns and with a heavy secondary armament. While five ships of the class were planned in 1944, they were cancelled following the end of the war, before construction could begin."
+ #AST_light_cruiser_4:0 "海王星级"
+ #AST_light_cruiser_4_desc:0 "海王星级是英国皇家海军在二战后期计划的一级巡洋舰。她们是装备有十二门6英寸主炮及十二门4.5英寸高平两用炮的大型舰艇。虽然1944年计划建造5艘该级舰艇，但它们都因战争结束而在开始建造前就被取消了。"
+ NZL_light_cruiser_1:0 "Danae Class"
+ NZL_light_cruiser_1_desc:0 "The Danaes were based on the design of the preceding C class series, but were lengthened by 20 feet to allow a sixth 6-inch gun to be worked in between the bridge and the forefunnel. Additionally, the twin torpedo tubes in the C class were replaced by triples, giving the Danaes a total of twelve tubes, the heaviest torpedo armament for a cruiser at the time."
+ #NZL_light_cruiser_1:0 "达娜厄级"
+ #NZL_light_cruiser_1_desc:0 "达娜厄级是基于其之前的C级设计的，但被加长了20英尺，以便能在舰桥和前烟囱之间使用第六门6英寸口径火炮。除此之外，C级的双联装鱼雷发射管被替换为三联装，这样达娜厄便总共拥有了12具发射管，是当时世界上最重的鱼雷武器"
+ NZL_light_cruiser_4:0 "Neptune Class"
+ NZL_light_cruiser_4_desc:0 "The Neptune class was a proposed class of cruisers planned for the British Royal Navy in the latter years of the Second World War. They were large ships which were to be armed with twelve 6-inch dual-purpose guns and with a heavy secondary armament. While five ships of the class were planned in 1944, they were cancelled following the end of the war, before construction could begin."
+ #NZL_light_cruiser_4:0 "海王星级"
+ #NZL_light_cruiser_4_desc:0 "海王星级是英国皇家海军在二战后期计划的一级巡洋舰。她们是装备有十二门6英寸主炮及十二门4.5英寸高平两用炮的大型舰艇。虽然1944年计划建造5艘该级舰艇，但它们都因战争结束而在开始建造前就被取消了。"
+ SAF_light_cruiser_4:0 "Neptune Class"
+ SAF_light_cruiser_4_desc:0 "The Neptune class was a proposed class of cruisers planned for the British Royal Navy in the latter years of the Second World War. They were large ships which were to be armed with twelve 6-inch dual-purpose guns and with a heavy secondary armament. While five ships of the class were planned in 1944, they were cancelled following the end of the war, before construction could begin."
+ #SAF_light_cruiser_4:0 "海王星级"
+ #SAF_light_cruiser_4_desc:0 "海王星级是英国皇家海军在二战后期计划的一级巡洋舰。她们是装备有十二门6英寸主炮及十二门4.5英寸高平两用炮的大型舰艇。虽然1944年计划建造5艘该级舰艇，但它们都因战争结束而在开始建造前就被取消了。"
+ RAJ_light_cruiser_4:0 "Neptune Class"
+ RAJ_light_cruiser_4_desc:0 "The Neptune class was a proposed class of cruisers planned for the British Royal Navy in the latter years of the Second World War. They were large ships which were to be armed with twelve 6-inch dual-purpose guns and with a heavy secondary armament. While five ships of the class were planned in 1944, they were cancelled following the end of the war, before construction could begin."
+ #RAJ_light_cruiser_4:0 "海王星级"
+ #RAJ_light_cruiser_4_desc:0 "海王星级是英国皇家海军在二战后期计划的一级巡洋舰。她们是装备有十二门6英寸主炮及十二门4.5英寸高平两用炮的大型舰艇。虽然1944年计划建造5艘该级舰艇，但它们都因战争结束而在开始建造前就被取消了。"
+
+ 
+ #Japan
+ JAP_light_cruiser_2:0 "Katori Class"
+ JAP_light_cruiser_2_desc:0 "Katori Class cruisers were originally ordered to serve as training ships. With the Pacific War, they were used as administrative flagships for various fleets, such as submarine command and control, and to command escort squadrons. The ships were upgraded as the war progressed with additional anti-aircraft guns and depth charges."
+ #JAP_light_cruiser_2:0 "香取级"
+ #JAP_light_cruiser_2_desc:0 "香曲级原本被设计为训练舰。在太平洋战争中，他们被用作各种舰队的行政旗舰，比如潜艇指挥与控制，以及指挥护航中队。随着战争的进行，该型舰艇进行了改造升级，增加了额外的高射炮以及深水炸弹。"
+ JAP_light_cruiser_4:0 "Oyodo Class"
+ JAP_light_cruiser_4_desc:0 "Oyodo was a light cruiser built for the IJN  during World War II, and was the only ship of her class completed before the end of the war. It was originally designed to command submarine operations, but it was used as a transport and to escort the navy's capital ships for the rest of the year."
+ #JAP_light_cruiser_4:0 "大淀级"
+ #JAP_light_cruiser_4_desc:0 "大淀级是二战期间日本海军建造的一艘轻巡洋舰，同时也是该级在二战结束前的唯一完成的舰艇。她原本是为指挥潜艇行动而设计的，但是她在余下的年份里只是用作运输舰，并为海军主力舰护航。"
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

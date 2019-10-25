@@ -1,0 +1,20 @@
+bitmapfonts = {
+	bitmapfont = {
+		name = "#vt323_16bold"
+#		path = "gfx/fonts/#vt323_16bold"
+		fontfiles = { 
+			"gfx/fonts/#vt323_16bold"
+			"gfx/fonts/#vt323_16bold"
+		}		
+		color = 0xffffffff
+
+		textcolors = {
+			G = { 86 172 91 }
+			R = { 222 86 70 }
+			Y = { 238 201 35 }
+			H = { 238 201 35 }
+			T = { 255 255 255 }
+		}
+	}
+}
+

@@ -1,0 +1,1251 @@
+#Category only allowed for GER
+	
+GER_eastern_front_category = {
+    
+	GER_operation_zitadelle = {
+		available = {
+		    has_war_with = SOV
+			NOT = {has_idea = SOV_military_operation_idea}
+			date > 1943.1.1
+            SOV = {controls_state = 220 }
+		}
+		cost = 10
+		fire_only_once = yes
+		icon = generic_army_support
+		complete_effect = {
+		    add_timed_idea = {
+			    idea = SOV_military_operation_idea
+				days = 60
+			}
+		}
+	}
+	
+	GER_operation_blau = {
+		available = {
+		    has_war_with = SOV
+			NOT = {has_idea = SOV_military_operation_idea}
+			or = {
+			   date > 1942.1.1
+			    GER = {controls_state = 227}
+				GER = {controls_state = 228}
+			}
+		}
+		cost = 10
+		fire_only_once = yes
+		icon = generic_army_support
+		complete_effect = {
+		    add_timed_idea = {
+			    idea = SOV_military_operation_idea
+				days = 60
+			}
+		}
+	}
+	
+	GER_operation_typhoon = {
+		available = {
+		    has_war_with = SOV
+			NOT = {has_idea = SOV_military_operation_idea}
+			or = {
+			    GER = {controls_state = 241}
+				GER = {controls_state = 224}
+				GER = {controls_state = 210}
+			}
+		}
+		cost = 10
+		fire_only_once = yes
+		icon = generic_army_support
+		complete_effect = {
+		    add_timed_idea = {
+			    idea = SOV_military_operation_idea
+				days = 30
+			}
+		}
+	}
+	
+	GER_operation_beowulf = {
+		available = {
+		    has_war_with = SOV
+			NOT = {has_idea = SOV_military_operation_idea}
+			or = {
+			    GER = {controls_state = 190}
+				GER = {controls_state = 12}
+			}
+		}
+		cost = 10
+		fire_only_once = yes
+		icon = generic_army_support
+		complete_effect = {
+		    add_timed_idea = {
+			    idea = SOV_military_operation_idea
+				days = 30
+			}
+		}
+	}
+	
+	GER_operation_edelweiss = {
+		available = {
+		    has_war_with = SOV
+			NOT = {has_idea = SOV_military_operation_idea}
+		    GER = {controls_state = 234}
+		}
+		cost = 10
+		fire_only_once = yes
+		icon = generic_army_support
+		complete_effect = {
+		    add_timed_idea = {
+			    idea = SOV_military_operation_idea
+				days = 30
+			}
+		}
+	}
+	
+	GER_operation_wintergewitter = {
+		available = {
+		    has_war_with = SOV
+			NOT = {has_idea = SOV_military_operation_idea}
+		    SOV = {controls_state = 217}
+			GER = {controls_state = 238}
+		}
+		cost = 10
+		fire_only_once = yes
+		icon = generic_army_support
+		complete_effect = {
+		    add_timed_idea = {
+			    idea = SOV_military_operation_idea
+				days = 30
+			}
+		}
+	}
+	
+	GER_operation_feuerzauber = {
+		available = {
+		    has_war_with = SOV
+			NOT = {has_idea = SOV_military_operation_idea}
+		    SOV = {controls_state = 195}
+			or = {
+			    GER = {controls_state = 208}
+			    GER = {controls_state = 244}
+			}
+		}
+		cost = 10
+		fire_only_once = yes
+		icon = generic_army_support
+		complete_effect = {
+		    add_timed_idea = {
+			    idea = SOV_military_operation_idea
+				days = 30
+			}
+		}
+	}
+	
+	GER_operation_trappenjagd = {
+		available = {
+		    has_war_with = SOV
+			NOT = {has_idea = SOV_military_operation_idea}
+		    or = {
+			    GER = {controls_state = 137}
+				ROM = {controls_State = 137}
+				HUN = {controls_State = 137}
+			}
+		}
+		cost = 10
+		fire_only_once = yes
+		icon = generic_army_support
+		complete_effect = {
+		    add_timed_idea = {
+			    idea = SOV_military_operation_idea
+				days = 30
+			}
+		}
+	}
+	
+	
+	
+}
+	
+	
+GER_mefo_bills_category = {
+
+	GER_mefo_bills_mission = {
+
+		allowed = { always = no }
+
+		icon = ger_mefo_bills
+
+		available = {
+			NOT = { has_government = democratic }
+			GER_can_delay_mefo_payment = yes
+			has_political_power > 0
+		}
+
+		#cost = GER_mefo_bill_counter?10
+
+		selectable_mission = yes
+		days_mission_timeout = 180
+		is_good = no
+		fire_only_once = yes
+
+		cancel_trigger = {
+			hidden_trigger = {
+				OR = {
+					NOT = { GER_has_mefo_bills = yes }
+					has_idea = GER_mefo_bills_ended
+				}
+			}
+		}
+
+		days_remove = GER_extend_mefo_bills_days?0
+		remove_effect = {
+			GER_mefo_bills_level_up = yes
+			if = {
+				limit = {
+					check_variable = { var = GER_mefo_bill_counter value = 15 compare = less_than }
+				}
+				set_variable = { var = GER_mefo_bill_counter value = 10 }
+			}
+			add_to_variable = { var = GER_mefo_bill_counter value = 10 }
+
+			hidden_effect = {
+				activate_mission = GER_mefo_bills_mission
+			}
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = GER_mefo_bills_mission_tt
+			custom_effect_tooltip = GER_mefo_bills_effect_in_days
+			effect_tooltip = {
+				GER_mefo_bills_level_up = yes
+			}
+			hidden_effect = {
+				set_variable = { GER_extend_mefo_bills_days = days_mission_timeout@GER_mefo_bills_mission }
+			}
+		}
+
+		timeout_effect = {
+			GER_mefo_bills_level_up = yes
+			if = {
+				limit = {
+					check_variable = { var = GER_mefo_bill_counter value = 15 compare = less_than }
+				}
+				set_variable = { var = GER_mefo_bill_counter value = 10 }
+			}
+			add_to_variable = { var = GER_mefo_bill_counter value = 10 }
+
+			hidden_effect = {
+				activate_mission = GER_mefo_bills_mission
+			}		
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+}
+GER_endsieg_category = {
+    GER_deploy_schwerepanzerabteilung_divisions = {
+	    cost = 25
+		fire_only_once = yes
+		icon = ger_reichskommissariats
+		
+		available = {
+		    date > 1942.1.1
+			surrender_progress > 0.3
+		}
+	    complete_effect = {
+			hidden_effect = {
+					division_template = {
+						name = "Schwere Panzerabteilung"
+						priority = 2
+						division_names_group = ROM_INF_01
+						regiments = {
+							heavy_armor = { x = 0 y = 0 }
+							heavy_armor = { x = 0 y = 1 }
+							heavy_armor = { x = 0 y = 2 }
+				
+		    	   		 	heavy_armor = { x = 1 y = 0 }
+							heavy_armor = { x = 1 y = 1 }
+							heavy_armor = { x = 1 y = 2 }
+				
+		    	   		 	motorized = { x = 2 y = 0 }
+							motorized = { x = 2 y = 1 }
+							motorized = { x = 2 y = 2 }
+							motorized = { x = 2 y = 3 }
+						}
+						support = {
+							engineer = { x = 0 y = 0 }
+							recon = { x = 0 y = 1 }
+						}
+					}
+					
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 64 }
+					create_unit = {
+						division = "name = \"501st Heavy Panzer Battalion\" division_template = \"Schwere Panzerabteilung\" start_experience_factor = 1.0" 
+						owner = GER
+					}
+					create_unit = {
+						division = "name = \"502nd Heavy Panzer Battalion\" division_template = \"Schwere Panzerabteilung\" start_experience_factor = 1.0" 
+						owner = GER
+					}
+				}
+			}			
+	}
+	    GER_deploy_volkssturm_regiments = {
+	    icon = ger_reichskommissariats
+		cost = 25
+		fire_only_once = yes
+		available = {
+		    date > 1942.1.1
+			surrender_progress > 0.2
+		}
+		complete_effect = {
+		    hidden_effect = {
+			    division_template = {
+				    name = "Volkssturm Regiment"
+					priority = 2
+					division_names_group = ROM_INF_01
+					regiments = {
+					    infantry = { x = 0 y = 0}
+						infantry = { x = 0 y = 1}
+						infantry = { x = 0 y = 2}
+						
+						infantry = { x = 1 y = 0}
+						infantry = { x = 1 y = 1}
+						infantry = { x = 1 y = 2}
+						
+						infantry = { x = 2 y = 0}
+						infantry = { x = 2 y = 1}
+						infantry = { x = 2 y = 2}
+						infantry = { x = 2 y = 3}
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						recon = { x = 0 y = 1 }
+					}
+				}
+			}
+			random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 64 }
+					create_unit = {
+						division = "name = \"Volkssturm Regiment\" division_template = \"Volkssturm Regiment\" start_experience_factor = 1.0" 
+						owner = GER
+					}
+					create_unit = {
+						division = "name = \"Volkssturm Regiment\" division_template = \"Volkssturm Regiment\" start_experience_factor = 1.0" 
+						owner = GER
+					}
+					create_unit = {
+						division = "name = \"Volkssturm Regiment\" division_template = \"Volkssturm Regiment\" start_experience_factor = 1.0" 
+						owner = GER
+					}
+					create_unit = {
+						division = "name = \"Volkssturm Regiment\" division_template = \"Volkssturm Regiment\" start_experience_factor = 1.0" 
+						owner = GER
+					}
+					create_unit = {
+						division = "name = \"Volkssturm Regiment\" division_template = \"Volkssturm Regiment\" start_experience_factor = 1.0" 
+						owner = GER
+					}
+					create_unit = {
+						division = "name = \"Volkssturm Regiment\" division_template = \"Volkssturm Regiment\" start_experience_factor = 1.0" 
+						owner = GER
+					}
+					create_unit = {
+						division = "name = \"Volkssturm Regiment\" division_template = \"Volkssturm Regiment\" start_experience_factor = 1.0" 
+						owner = GER
+					}
+					create_unit = {
+						division = "name = \"Volkssturm Regiment\" division_template = \"Volkssturm Regiment\" start_experience_factor = 1.0" 
+						owner = GER
+					}
+					create_unit = {
+						division = "name = \"Volkssturm Regiment\" division_template = \"Volkssturm Regiment\" start_experience_factor = 1.0" 
+						owner = GER
+					}
+					create_unit = {
+						division = "name = \"Volkssturm Regiment\" division_template = \"Volkssturm Regiment\" start_experience_factor = 1.0" 
+						owner = GER
+					}
+					create_unit = {
+						division = "name = \"Volkssturm Regiment\" division_template = \"Volkssturm Regiment\" start_experience_factor = 1.0" 
+						owner = GER
+					}
+					create_unit = {
+						division = "name = \"Volkssturm Regiment\" division_template = \"Volkssturm Regiment\" start_experience_factor = 1.0" 
+						owner = GER
+					}
+					create_unit = {
+						division = "name = \"Volkssturm Regiment\" division_template = \"Volkssturm Regiment\" start_experience_factor = 1.0" 
+						owner = GER
+					}
+					create_unit = {
+						division = "name = \"Volkssturm Regiment\" division_template = \"Volkssturm Regiment\" start_experience_factor = 1.0" 
+						owner = GER
+					}
+					create_unit = {
+						division = "name = \"Volkssturm Regiment\" division_template = \"Volkssturm Regiment\" start_experience_factor = 1.0" 
+						owner = GER
+					}
+					create_unit = {
+						division = "name = \"Volkssturm Regiment\" division_template = \"Volkssturm Regiment\" start_experience_factor = 1.0" 
+						owner = GER
+					}
+					create_unit = {
+						division = "name = \"Volkssturm Regiment\" division_template = \"Volkssturm Regiment\" start_experience_factor = 1.0" 
+						owner = GER
+					}
+					create_unit = {
+						division = "name = \"Volkssturm Regiment\" division_template = \"Volkssturm Regiment\" start_experience_factor = 1.0" 
+						owner = GER
+					}
+					create_unit = {
+						division = "name = \"Volkssturm Regiment\" division_template = \"Volkssturm Regiment\" start_experience_factor = 1.0" 
+						owner = GER
+					}
+					create_unit = {
+						division = "name = \"Volkssturm Regiment\" division_template = \"Volkssturm Regiment\" start_experience_factor = 1.0" 
+						owner = GER
+					}
+			}
+		}
+	}
+	GER_deploy_ss_panzergrenadier_divisions = {
+	    cost = 25
+		fire_only_once = yes
+		icon = ger_reichskommissariats
+		
+		available = {
+		    date > 1942.1.1
+			surrender_progress > 0.15
+			
+		}
+	    complete_effect = {
+			hidden_effect = {
+					division_template = {
+						name = "SS Panzergrenadier Division"
+						priority = 2
+						division_names_group = ROM_INF_01
+						regiments = {
+							mechanized = { x = 0 y = 0 }
+							mechanized = { x = 0 y = 1 }
+							mechanized = { x = 0 y = 2 }
+				
+		    	   		 	mechanized = { x = 1 y = 0 }
+							mechanized = { x = 1 y = 1 }
+							mechanized = { x = 1 y = 2 }
+				
+		    	   		 	mechanized = { x = 2 y = 0 }
+							mechanized = { x = 2 y = 1 }
+							mechanized = { x = 2 y = 2 }
+							mechanized = { x = 2 y = 3 }
+						}
+						support = {
+							engineer = { x = 0 y = 0 }
+							recon = { x = 0 y = 1 }
+						}
+					}
+					
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					prioritize = { 64 }
+					create_unit = {
+						division = "name = \"16. SS Panzergrenadier \" division_template = \"SS Panzergrenadier Division\" start_experience_factor = 1.0" 
+						owner = GER
+					}
+					create_unit = {
+						division = "name = \"17. SS Panzergrenadier \" division_template = \"SS Panzergrenadier Division\" start_experience_factor = 1.0" 
+						owner = GER
+					}
+					create_unit = {
+						division = "name = \"18. SS Panzergrenadier \" division_template = \"SS Panzergrenadier Division\" start_experience_factor = 1.0" 
+						owner = GER
+					}
+				}
+			}			
+	}
+}
+	
+	
+
+operations = {
+GER_defeat_dday = {
+
+		icon = generic_operation
+
+		allowed = {
+			always = no
+			#added through on_action
+		}
+
+		available = {
+			
+			custom_trigger_tooltip = {
+				tooltip = GER_defeat_dday_tt
+			}
+
+			NOT = {
+					OR = {
+						USA = { controls_state = 735 }
+						ENG = { controls_state = 735 }
+						CAN = { controls_state = 735 }
+						SAF = { controls_state = 735 }
+						RAJ = { controls_state = 735 }
+						NZL = { controls_state = 735 }
+						AST = { controls_state = 735 }
+						FRF = { controls_state = 735 }
+						HOL = { controls_state = 735 }
+						BEL = { controls_state = 735 }
+						LUX = { controls_state = 735 }
+						DEN	= { controls_state = 735 }											
+					}
+					OR = {
+						USA = { controls_state = 21 }
+						ENG = { controls_state = 21 }
+						CAN = { controls_state = 21 }
+						SAF = { controls_state = 21 }
+						RAJ = { controls_state = 21 }
+						NZL = { controls_state = 21 }
+						AST = { controls_state = 21 }
+						FRF = { controls_state = 21 }
+						HOL = { controls_state = 21 }
+						BEL = { controls_state = 21 }
+						LUX = { controls_state = 21 }
+						DEN	= { controls_state = 21 }											
+					}
+										OR = {
+						USA = { controls_state = 18 }
+						ENG = { controls_state = 18 }
+						CAN = { controls_state = 18 }
+						SAF = { controls_state = 18 }
+						RAJ = { controls_state = 18 }
+						NZL = { controls_state = 18 }
+						AST = { controls_state = 18 }
+						FRF = { controls_state = 18 }
+						HOL = { controls_state = 18 }
+						BEL = { controls_state = 18 }
+						LUX = { controls_state = 18 }
+						DEN	= { controls_state = 18 }											
+					}
+										OR = {
+						USA = { controls_state = 31 }
+						ENG = { controls_state = 31 }
+						CAN = { controls_state = 31 }
+						SAF = { controls_state = 31 }
+						RAJ = { controls_state = 31 }
+						NZL = { controls_state = 31 }
+						AST = { controls_state = 31 }
+						FRF = { controls_state = 31 }
+						HOL = { controls_state = 31 }
+						BEL = { controls_state = 31 }
+						LUX = { controls_state = 31 }
+						DEN	= { controls_state = 31 }											
+					}
+										OR = {
+						USA = { controls_state = 19 }
+						ENG = { controls_state = 19 }
+						CAN = { controls_state = 19 }
+						SAF = { controls_state = 19 }
+						RAJ = { controls_state = 19 }
+						NZL = { controls_state = 19 }
+						AST = { controls_state = 19 }
+						FRF = { controls_state = 19 }
+						HOL = { controls_state = 19 }
+						BEL = { controls_state = 19 }
+						LUX = { controls_state = 19 }
+						DEN	= { controls_state = 19 }											
+					}
+										OR = {
+						USA = { controls_state = 23 }
+						ENG = { controls_state = 23 }
+						CAN = { controls_state = 23 }
+						SAF = { controls_state = 23 }
+						RAJ = { controls_state = 23 }
+						NZL = { controls_state = 23 }
+						AST = { controls_state = 23 }
+						FRF = { controls_state = 23 }
+						HOL = { controls_state = 23 }
+						BEL = { controls_state = 23 }
+						LUX = { controls_state = 23 }
+						DEN	= { controls_state = 23 }											
+					}
+										OR = {
+						USA = { controls_state = 30 }
+						ENG = { controls_state = 30 }
+						CAN = { controls_state = 30 }
+						SAF = { controls_state = 30 }
+						RAJ = { controls_state = 30 }
+						NZL = { controls_state = 30 }
+						AST = { controls_state = 30 }
+						FRF = { controls_state = 30 }
+						HOL = { controls_state = 30 }
+						BEL = { controls_state = 30 }
+						LUX = { controls_state = 30 }
+						DEN	= { controls_state = 30 }											
+					}
+										OR = {
+						USA = { controls_state = 14 }
+						ENG = { controls_state = 14 }
+						CAN = { controls_state = 14 }
+						SAF = { controls_state = 14 }
+						RAJ = { controls_state = 14 }
+						NZL = { controls_state = 14 }
+						AST = { controls_state = 14 }
+						FRF = { controls_state = 14 }
+						HOL = { controls_state = 14 }
+						BEL = { controls_state = 14 }
+						LUX = { controls_state = 14 }
+						DEN	= { controls_state = 14 }											
+					}
+										OR = {
+						USA = { controls_state = 15 }
+						ENG = { controls_state = 15 }
+						CAN = { controls_state = 15 }
+						SAF = { controls_state = 15 }
+						RAJ = { controls_state = 15 }
+						NZL = { controls_state = 15 }
+						AST = { controls_state = 15 }
+						FRF = { controls_state = 15 }
+						HOL = { controls_state = 15 }
+						BEL = { controls_state = 15 }
+						LUX = { controls_state = 15 }
+						DEN	= { controls_state = 15 }											
+					}
+										OR = {
+						USA = { controls_state = 785 }
+						ENG = { controls_state = 785 }
+						CAN = { controls_state = 785 }
+						SAF = { controls_state = 785 }
+						RAJ = { controls_state = 785 }
+						NZL = { controls_state = 785 }
+						AST = { controls_state = 785 }
+						FRF = { controls_state = 785 }
+						HOL = { controls_state = 785 }
+						BEL = { controls_state = 785 }
+						LUX = { controls_state = 785 }
+						DEN	= { controls_state = 785 }											
+					}
+										OR = {
+						USA = { controls_state = 29 }
+						ENG = { controls_state = 29 }
+						CAN = { controls_state = 29 }
+						SAF = { controls_state = 29 }
+						RAJ = { controls_state = 29 }
+						NZL = { controls_state = 29 }
+						AST = { controls_state = 29 }
+						FRF = { controls_state = 29 }
+						HOL = { controls_state = 29 }
+						BEL = { controls_state = 29 }
+						LUX = { controls_state = 29 }
+						DEN	= { controls_state = 29 }											
+					}
+										OR = {
+						USA = { controls_state = 6 }
+						ENG = { controls_state = 6 }
+						CAN = { controls_state = 6 }
+						SAF = { controls_state = 6 }
+						RAJ = { controls_state = 6 }
+						NZL = { controls_state = 6 }
+						AST = { controls_state = 6 }
+						FRF = { controls_state = 6 }
+						HOL = { controls_state = 6 }
+						BEL = { controls_state = 6 }
+						LUX = { controls_state = 6 }
+						DEN	= { controls_state = 6 }											
+					}
+										OR = {
+						USA = { controls_state = 7 }
+						ENG = { controls_state = 7 }
+						CAN = { controls_state = 7 }
+						SAF = { controls_state = 7 }
+						RAJ = { controls_state = 7 }
+						NZL = { controls_state = 7 }
+						AST = { controls_state = 7 }
+						FRF = { controls_state = 7 }
+						HOL = { controls_state = 7 }
+						BEL = { controls_state = 7 }
+						LUX = { controls_state = 7 }
+						DEN	= { controls_state = 7 }											
+					}
+										OR = {
+						USA = { controls_state = 36 }
+						ENG = { controls_state = 36 }
+						CAN = { controls_state = 36 }
+						SAF = { controls_state = 36 }
+						RAJ = { controls_state = 36 }
+						NZL = { controls_state = 36 }
+						AST = { controls_state = 36 }
+						FRF = { controls_state = 36 }
+						HOL = { controls_state = 36 }
+						BEL = { controls_state = 36 }
+						LUX = { controls_state = 36 }
+						DEN	= { controls_state = 36 }											
+					}
+										OR = {
+						USA = { controls_state = 56 }
+						ENG = { controls_state = 56 }
+						CAN = { controls_state = 56 }
+						SAF = { controls_state = 56 }
+						RAJ = { controls_state = 56 }
+						NZL = { controls_state = 56 }
+						AST = { controls_state = 56 }
+						FRF = { controls_state = 56 }
+						HOL = { controls_state = 56 }
+						BEL = { controls_state = 56 }
+						LUX = { controls_state = 56 }
+						DEN	= { controls_state = 56 }											
+					}
+										OR = {
+						USA = { controls_state = 59 }
+						ENG = { controls_state = 59 }
+						CAN = { controls_state = 59 }
+						SAF = { controls_state = 59 }
+						RAJ = { controls_state = 59 }
+						NZL = { controls_state = 59 }
+						AST = { controls_state = 59 }
+						FRF = { controls_state = 59 }
+						HOL = { controls_state = 59 }
+						BEL = { controls_state = 59 }
+						LUX = { controls_state = 59 }
+						DEN	= { controls_state = 59 }											
+					}
+										OR = {
+						USA = { controls_state = 58 }
+						ENG = { controls_state = 58 }
+						CAN = { controls_state = 58 }
+						SAF = { controls_state = 58 }
+						RAJ = { controls_state = 58 }
+						NZL = { controls_state = 58 }
+						AST = { controls_state = 58 }
+						FRF = { controls_state = 58 }
+						HOL = { controls_state = 58 }
+						BEL = { controls_state = 58 }
+						LUX = { controls_state = 58 }
+						DEN	= { controls_state = 58 }											
+					}
+										OR = {
+						USA = { controls_state = 99 }
+						ENG = { controls_state = 99 }
+						CAN = { controls_state = 99 }
+						SAF = { controls_state = 99 }
+						RAJ = { controls_state = 99 }
+						NZL = { controls_state = 99 }
+						AST = { controls_state = 99 }
+						FRF = { controls_state = 99 }
+						HOL = { controls_state = 99 }
+						BEL = { controls_state = 99 }
+						LUX = { controls_state = 99 }
+						DEN	= { controls_state = 99 }											
+					}
+										OR = {
+						USA = { controls_state = 61 }
+						ENG = { controls_state = 61 }
+						CAN = { controls_state = 61 }
+						SAF = { controls_state = 61 }
+						RAJ = { controls_state = 61 }
+						NZL = { controls_state = 61 }
+						AST = { controls_state = 61 }
+						FRF = { controls_state = 61 }
+						HOL = { controls_state = 61 }
+						BEL = { controls_state = 61 }
+						LUX = { controls_state = 61 }
+						DEN	= { controls_state = 61 }											
+					}
+										OR = {
+						USA = { controls_state = 62 }
+						ENG = { controls_state = 62 }
+						CAN = { controls_state = 62 }
+						SAF = { controls_state = 62 }
+						RAJ = { controls_state = 62 }
+						NZL = { controls_state = 62 }
+						AST = { controls_state = 62 }
+						FRF = { controls_state = 62 }
+						HOL = { controls_state = 62 }
+						BEL = { controls_state = 62 }
+						LUX = { controls_state = 62 }
+						DEN	= { controls_state = 62 }											
+					}
+										OR = {
+						USA = { controls_state = 63 }
+						ENG = { controls_state = 63 }
+						CAN = { controls_state = 63 }
+						SAF = { controls_state = 63 }
+						RAJ = { controls_state = 63 }
+						NZL = { controls_state = 63 }
+						AST = { controls_state = 63 }
+						FRF = { controls_state = 63 }
+						HOL = { controls_state = 63 }
+						BEL = { controls_state = 63 }
+						LUX = { controls_state = 63 }
+						DEN	= { controls_state = 63 }											
+					}
+										OR = {
+						USA = { controls_state = 85 }
+						ENG = { controls_state = 85 }
+						CAN = { controls_state = 85 }
+						SAF = { controls_state = 85 }
+						RAJ = { controls_state = 85 }
+						NZL = { controls_state = 85 }
+						AST = { controls_state = 85 }
+						FRF = { controls_state = 85 }
+						HOL = { controls_state = 85 }
+						BEL = { controls_state = 85 }
+						LUX = { controls_state = 85 }
+						DEN	= { controls_state = 85 }											
+					}
+										OR = {
+						USA = { controls_state = 788 }
+						ENG = { controls_state = 788 }
+						CAN = { controls_state = 788 }
+						SAF = { controls_state = 788 }
+						RAJ = { controls_state = 788 }
+						NZL = { controls_state = 788 }
+						AST = { controls_state = 788 }
+						FRF = { controls_state = 788 }
+						HOL = { controls_state = 788 }
+						BEL = { controls_state = 788 }
+						LUX = { controls_state = 788 }
+						DEN	= { controls_state = 788 }											
+					}
+										OR = {
+						USA = { controls_state = 763 }
+						ENG = { controls_state = 763 }
+						CAN = { controls_state = 763 }
+						SAF = { controls_state = 763 }
+						RAJ = { controls_state = 763 }
+						NZL = { controls_state = 763 }
+						AST = { controls_state = 763 }
+						FRF = { controls_state = 763 }
+						HOL = { controls_state = 763 }
+						BEL = { controls_state = 763 }
+						LUX = { controls_state = 763 }
+						DEN	= { controls_state = 763 }											
+					}
+				}
+			
+			
+
+		}
+
+		days_mission_timeout = 999
+		fire_only_once = yes
+
+		activation = {
+
+		}
+
+		is_good = no
+
+		complete_effect = {
+			set_global_flag = GDU_dday_defeated		
+			clr_global_flag = GDU_dday_started
+			add_war_support = 0.2
+			add_stability = 0.2
+			
+			add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 10000 producer = USA }
+
+
+			add_equipment_to_stockpile = { type = anti_air_equipment_2 amount = 500 producer = USA }
+
+			
+			add_equipment_to_stockpile = { type = artillery_equipment_2 amount = 800 producer = USA }
+			
+
+			add_equipment_to_stockpile = { type = anti_tank_equipment_2 amount = 600 producer = USA }
+
+
+			add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 1000 producer = USA }		
+			add_equipment_to_stockpile = { type = support_equipment_1 amount = 500 producer = USA }
+
+			add_equipment_to_stockpile = { type = medium_tank_equipment_2 amount = 800 producer = USA }
+						
+			add_timed_idea = { idea = GER_triumph_dday_idea days = 90 } 
+			USA = {
+				add_timed_idea = { idea = ALLIES_fail_dday_idea days = 90 }
+				add_war_support = -0.2
+				add_political_power = -100
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.05
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 0.05
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.05
+				}				
+			}
+			ENG = {
+				add_timed_idea = { idea = ALLIES_fail_dday_idea days = 90 }
+				add_war_support = -0.2
+				add_political_power = -100
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.05
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 0.05
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.05
+				}				
+			}
+			CAN = {
+				add_timed_idea = { idea = ALLIES_fail_dday_idea days = 90 }
+				add_war_support = -0.2
+				add_political_power = -100
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.05
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 0.05
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.05
+				}				
+			}			
+			SAF = {
+				add_timed_idea = { idea = ALLIES_fail_dday_idea days = 90 }
+				add_war_support = -0.2
+				add_political_power = -100
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.05
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 0.05
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.05
+				}				
+			}
+			AST = {
+				add_timed_idea = { idea = ALLIES_fail_dday_idea days = 90 }
+				add_war_support = -0.2
+				add_political_power = -100
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.05
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 0.05
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.05
+				}				
+			}			
+			NZL = {
+				add_timed_idea = { idea = ALLIES_fail_dday_idea days = 90 }
+				add_war_support = -0.2
+				add_political_power = -100
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.05
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 0.05
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.05
+				}				
+			}
+			RAJ = {
+				add_timed_idea = { idea = ALLIES_fail_dday_idea days = 90 }
+				add_war_support = -0.2
+				add_political_power = -100
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.05
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 0.05
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.05
+				}				
+			}
+			FRF = {
+				add_timed_idea = { idea = ALLIES_fail_dday_idea days = 90 }
+				add_war_support = -0.2
+				add_political_power = -100
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.05
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 0.05
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.05
+				}	
+			}
+			
+			
+		}
+
+		timeout_effect = {
+			set_global_flag = GDU_dday_succeeded				
+ 			set_global_flag = GDU_dday_started
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	GER_barbarossa_mission = {
+
+		icon = generic_operation
+
+		allowed = {
+			always = no
+			#added through on_action
+		}
+
+		available = {
+			219 = { is_controlled_by_ROOT_or_ally = yes }
+			195 = { is_controlled_by_ROOT_or_ally = yes }
+			202 = { is_controlled_by_ROOT_or_ally = yes }
+			217 = { is_controlled_by_ROOT_or_ally = yes }
+		}
+
+		days_mission_timeout = 180
+		fire_only_once = yes
+
+		activation = {
+
+		}
+
+		is_good = no
+
+		complete_effect = {
+			add_war_support = 0.1
+			custom_effect_tooltip = barbarossa_mission_tt
+		}
+
+		timeout_effect = {
+			
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+GER_vemork_hydroelectric_plant_category = {
+
+    GER_jaegernotprogramm = {
+
+		icon = generic_air
+
+		available = {
+			has_war = yes
+			NOR = {NOT = {controls_state = 110} }
+			GRE = {NOT = {controls_state = 47} }
+			FRA = {NOT = {controls_state = 16} }
+		}
+
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+
+		visible = {
+			has_war = yes
+		}
+
+		complete_effect = {
+			add_timed_idea = { idea = GER_jaegernotprogramm days = 90 }
+		}
+	}
+
+    GER_seize_vemork_facility = {
+	    icon = generic_operation
+	    available = {
+		    original_tag = GER
+		    controls_state = 110
+		}
+	    cost = 25
+		fire_only_once = yes
+		complete_effect = {
+		    add_tech_bonus = {
+			    name = secret_bonus
+				bonus = 1.5
+				uses = 1
+				technology = nuclear_reactor
+			}
+		}
+	    remove_effect = {
+		    110 = {
+			    add_extra_state_shared_building_slots = 2
+			    add_building_construction = {
+			        type = nuclear_reactor
+			        level = 2
+			        instant_build = yes
+			    }
+			
+			}
+		}
+	    days_remove = 360
+	}
+	
+	GER_jet_experiments = {
+	    icon = generic_research
+		available = {
+		    original_tag = GER
+			date > 1942.1.1
+		}
+		cost = 25
+		fire_only_once = yes
+		remove_effect = {
+		    set_technology = { experimental_rockets = 1}
+			set_technology = { rocket_engines = 1}
+		}
+		days_remove = 180
+	}
+	
+	GER_me262_development = {
+	    icon = generic_research
+		available = {
+		    original_tag = GER
+			date > 1943.1.1
+			has_tech = rocket_engines
+		}
+		cost = 25
+		fire_only_once = yes
+		remove_effect = {
+		    set_technology = { jet_engines = 1}
+			set_technology = { jet_fighter1 = 1}
+		}
+		days_remove = 180
+	}
+	
+	SOV_develop_panther = {
+	    icon = generic_research
+		available = {
+		    date > 1941.1.1
+		}
+		cost = 10
+		fire_only_once = yes
+		complete_effect = {
+		    add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				name = mech_army_bonus
+				technology = advanced_medium_tank
+			}
+		}
+		
+	}
+}
+
+
+
+
+
+
+
+special_projects = {
+    
+	"Develop Enigma Machine" = {
+	
+	    icon = ger_reichskommissariats
+	
+	    cost = 25
+	
+	    fire_only_once = yes
+		
+		available = {
+		    always = yes
+		}
+		
+		visible = {
+		    original_tag = GER
+	    }
+		
+		complete_effect = {
+		    add_ideas = GER_enigma_machine
+		}
+	
+	
+	
+	}
+	#GER_annex_iraq = {
+	#
+	#	icon = ger_mefo_bills
+	#	
+	#	fire_only_once = yes
+	#	
+	#	cost = 0
+	#	
+	#	allowed = {
+	#		original_tag = GER
+	#		}
+	#	
+	#	available = {
+	#		has_full_control_of_state = 447 #Alexandria
+	#		has_full_control_of_state = 453 #Sinai
+	#		has_full_control_of_state = 454 #Palestine
+	#		has_full_control_of_state = 553 #Lebanon
+	#		has_full_control_of_state = 554 #Damascus
+	#	}
+	#	
+	#	visible = {
+	#		has_war_with = ENG
+	#	}
+	#	
+	#	complete_effect = {
+	#		annex_country = {
+	#		target = IRQ
+	#		transfer_troops = no
+	#		}
+	#	}
+	#}
+}
+
+#War with the Soviets
+#GER_barbarossa_decision = {
+#
+#	GER_war_with_the_USSR = {
+#	cost = 0		
+#	fire_only_once = yes	
+#	icon = generic_nationalism
+#	
+#		available = {
+#			NOT = { has_war_with = SOV }
+#			has_completed_focus = GER_ussr_war_goal
+#			}
+#		
+#		allowed = {
+#			original_tag = GER
+#			}
+#			
+#	
+#		complete_effect = {
+#			declare_war_on = SOV
+#			type = annex_everything
+#			}
+#		}
+#}

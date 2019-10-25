@@ -1,0 +1,69 @@
+ideas = {
+    country = {
+		ALLIES_fail_dday_idea = { 
+		
+			picture = chi_war_of_resistance	
+			
+			allowed = { 
+				always = no 
+			}
+			
+			removal_cost = -1 
+			
+			modifier = { 
+				army_morale_factor = -0.05
+				industrial_capacity_factory = -0.10
+			}
+		}
+        no_spam_pls_idea = {
+		    allowed = {
+			    always = no
+			}
+			removal_cost = -1
+			modifier = {
+            	conscription = -0.03
+			}
+			picture = waffen_ss
+		}
+		 INS_no_spam_pls_idea = {
+		    allowed = {
+			    always = no
+			}
+			removal_cost = -1
+			modifier = {
+            	conscription = -0.03
+			}
+			picture = waffen_ss
+		}
+		 no_spam_pls_idea_2 = {
+		    allowed = {
+			    always = no
+			}
+			removal_cost = -1
+			modifier = {
+            	conscription = -0.04
+			}
+			picture = waffen_ss
+		}
+		 no_spam_pls_idea_3 = {
+		    allowed = {
+			    always = no
+			}
+			removal_cost = -1
+			modifier = {
+            	conscription = -0.06
+			}
+			picture = waffen_ss
+		}
+		no_spam_pls_idea_CHI = {
+		    allowed = {
+			    always = no
+			}
+			removal_cost = -1
+			modifier = {
+            	conscription = -0.15
+			}
+			picture = waffen_ss
+		}
+    }
+}

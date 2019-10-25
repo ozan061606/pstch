@@ -1,0 +1,24 @@
+
+state={
+	id=113
+	name="STATE_113" # Leinster
+	manpower = 1357600
+	
+	
+	state_category = city
+	
+	history={
+		owner = ENG
+		victory_points = {
+			11293 5 
+		}
+		buildings = {
+			infrastructure = 6
+		}
+		
+	}
+
+	provinces={
+		285 303 369 3342 3359 7377 11293 11303 
+	}
+}

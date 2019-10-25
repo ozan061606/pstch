@@ -1,0 +1,754 @@
+add_namespace = pst
+
+##Event: Suprise German Invasion!
+country_event = {
+ id = pst.1
+ title = pst.1.title
+ desc = pst.1.desc
+ picture = GFX_report_event_hungarian_soldiers
+ fire_only_once = yes
+ major = yes
+ trigger = {
+    has_war_with = GER
+	tag = SOV
+ }
+	option = {
+		name = pst.1.a
+		ai_chance = { factor = 1}
+		add_timed_idea = {
+		    idea = SOV_disorganized_tank_crews
+			days = 30
+		}
+		add_timed_idea = { 
+		    idea = SOV_army_in_chaos 
+		    days = 30
+		
+	    }
+		add_timed_idea = {
+		    idea = SOV_shattered_retreat
+			days = 30
+		}
+	    add_timed_idea = { 
+		    idea = SOV_lack_of_officers 
+		    days = 120
+	    }
+	   add_timed_idea = { 
+		    idea = SOV_disorganized_airforce
+		    days = 120
+	    }
+	   
+		
+	}
+}
+
+
+
+##Event: Preparations For The Defence Of Moscow
+country_event = {
+ id = pst.3
+ title = pst.3.title
+ desc = pst.3.desc
+ picture = GFX_report_event_soviet_tanks
+ fire_only_once = yes
+ major = yes
+ trigger = {
+  surrender_progress > 0.16
+  tag = SOV
+ }	
+	mean_time_to_happen = { days = 1}
+	option = {
+		name = pst.3.a
+		ai_chance = { factor = 1}
+		add_war_support = 0.15
+		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 40000 producer = SOV }
+    }
+	
+}
+
+##Event: Modernization Of The Red Army
+country_event = {
+ id = pst.4
+ title = pst.4.title
+ desc = pst.4.desc
+ picture = GFX_report_event_generic_factory
+ fire_only_once = yes
+ major = yes
+
+	trigger = {
+        surrender_progress > 0.20
+		tag = SOV
+    }
+	mean_time_to_happen = { days = 1}
+    option = {
+		name = pst.4.a
+		ai_chance = { factor = 1}
+		add_ideas = SOV_modernize_the_red_army
+		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 60000 producer = SOV }
+		add_equipment_to_stockpile = { type = support_equipment_1 amount = 1000 producer = SOV }
+		hidden_effect = {
+			    division_template = {
+				    name = "Conscript Regiment"
+					priority = 1
+					division_names_group = SOV_INF_01
+					regiments = {
+					    infantry = { x = 0 y = 0}
+						infantry = { x = 0 y = 1}
+						infantry = { x = 0 y = 2}
+						
+						infantry = { x = 1 y = 0}
+						infantry = { x = 1 y = 1}
+						infantry = { x = 1 y = 2}
+						
+						infantry = { x = 2 y = 0}
+						infantry = { x = 2 y = 1}
+						infantry = { x = 2 y = 2}
+						infantry = { x = 2 y = 3}
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						recon = { x = 0 y = 1 }
+					}
+				}
+			}
+			219 = {
+					prioritize = { 6380 }
+					create_unit = {
+						division = "name = \"Conscript Regiment\" division_template = \"Conscript Regiment\" start_experience_factor = 0.1" 
+						owner = SOV
+					}
+					create_unit = {
+						division = "name = \"Conscript Regiment\" division_template = \"Conscript Regiment\" start_experience_factor = 0.1" 
+						owner = SOV
+					}
+					create_unit = {
+						division = "name = \"Conscript Regiment\" division_template = \"Conscript Regiment\" start_experience_factor = 0.1" 
+						owner = SOV
+					}
+					create_unit = {
+						division = "name = \"Conscript Regiment\" division_template = \"Conscript Regiment\" start_experience_factor = 0.1" 
+						owner = SOV
+					}
+					create_unit = {
+						division = "name = \"Conscript Regiment\" division_template = \"Conscript Regiment\" start_experience_factor = 0.1" 
+						owner = SOV
+					}
+					create_unit = {
+						division = "name = \"Conscript Regiment\" division_template = \"Conscript Regiment\" start_experience_factor = 0.1" 
+						owner = SOV
+					}
+					create_unit = {
+						division = "name = \"Conscript Regiment\" division_template = \"Conscript Regiment\" start_experience_factor = 0.1" 
+						owner = SOV
+					}
+					create_unit = {
+						division = "name = \"Conscript Regiment\" division_template = \"Conscript Regiment\" start_experience_factor = 0.1" 
+						owner = SOV
+					}
+					create_unit = {
+						division = "name = \"Conscript Regiment\" division_template = \"Conscript Regiment\" start_experience_factor = 0.1" 
+						owner = SOV
+					}
+					create_unit = {
+						division = "name = \"Conscript Regiment\" division_template = \"Conscript Regiment\" start_experience_factor = 0.1" 
+						owner = SOV
+					}
+					create_unit = {
+						division = "name = \"Conscript Regiment\" division_template = \"Conscript Regiment\" start_experience_factor = 0.1" 
+						owner = SOV
+					}
+					create_unit = {
+						division = "name = \"Conscript Regiment\" division_template = \"Conscript Regiment\" start_experience_factor = 0.1" 
+						owner = SOV
+					}
+					create_unit = {
+						division = "name = \"Conscript Regiment\" division_template = \"Conscript Regiment\" start_experience_factor = 0.1" 
+						owner = SOV
+					}
+					create_unit = {
+						division = "name = \"Conscript Regiment\" division_template = \"Conscript Regiment\" start_experience_factor = 0.1" 
+						owner = SOV
+					}
+					create_unit = {
+						division = "name = \"Conscript Regiment\" division_template = \"Conscript Regiment\" start_experience_factor = 0.1" 
+						owner = SOV
+					}
+					create_unit = {
+						division = "name = \"Conscript Regiment\" division_template = \"Conscript Regiment\" start_experience_factor = 0.1" 
+						owner = SOV
+					}
+					create_unit = {
+						division = "name = \"Conscript Regiment\" division_template = \"Conscript Regiment\" start_experience_factor = 0.1" 
+						owner = SOV
+					}
+					create_unit = {
+						division = "name = \"Conscript Regiment\" division_template = \"Conscript Regiment\" start_experience_factor = 0.1" 
+						owner = SOV
+					}
+					create_unit = {
+						division = "name = \"Conscript Regiment\" division_template = \"Conscript Regiment\" start_experience_factor = 0.1" 
+						owner = SOV
+					}
+					create_unit = {
+						division = "name = \"Conscript Regiment\" division_template = \"Conscript Regiment\" start_experience_factor = 0.1" 
+						owner = SOV
+					}
+					create_unit = {
+						division = "name = \"Conscript Regiment\" division_template = \"Conscript Regiment\" start_experience_factor = 0.1" 
+						owner = SOV
+					}
+					create_unit = {
+						division = "name = \"Conscript Regiment\" division_template = \"Conscript Regiment\" start_experience_factor = 0.1" 
+						owner = SOV
+					}
+					create_unit = {
+						division = "name = \"Conscript Regiment\" division_template = \"Conscript Regiment\" start_experience_factor = 0.1" 
+						owner = SOV
+					}
+					create_unit = {
+						division = "name = \"Conscript Regiment\" division_template = \"Conscript Regiment\" start_experience_factor = 0.1" 
+						owner = SOV
+					}
+					create_unit = {
+						division = "name = \"Conscript Regiment\" division_template = \"Conscript Regiment\" start_experience_factor = 0.1" 
+						owner = SOV
+					}
+					create_unit = {
+						division = "name = \"Conscript Regiment\" division_template = \"Conscript Regiment\" start_experience_factor = 0.1" 
+						owner = SOV
+					}
+					create_unit = {
+						division = "name = \"Conscript Regiment\" division_template = \"Conscript Regiment\" start_experience_factor = 0.1" 
+						owner = SOV
+					}
+					create_unit = {
+						division = "name = \"Conscript Regiment\" division_template = \"Conscript Regiment\" start_experience_factor = 0.1" 
+						owner = SOV
+					}
+					create_unit = {
+						division = "name = \"Conscript Regiment\" division_template = \"Conscript Regiment\" start_experience_factor = 0.1" 
+						owner = SOV
+					}
+					create_unit = {
+						division = "name = \"Conscript Regiment\" division_template = \"Conscript Regiment\" start_experience_factor = 0.1" 
+						owner = SOV
+					}
+			}
+	}
+}
+
+##Event: Plot To Assasinate Hitler Discovered
+country_event = {
+ id = pst.5
+ title = pst.5.title
+ desc = pst.5.desc
+ picture = GFX_report_event_germany_politician_handshake
+ fire_only_once = yes
+ major = yes
+    trigger = {
+      surrender_progress > 0.02
+	  tag = GER
+    }	mean_time_to_happen = { days = 1}
+	option = {
+		name = pst.5.a
+		ai_chance = { factor = 1}
+		add_war_support = -0.05
+	}
+}
+
+##Event: Onwards To Berlin Comrades!
+country_event = {
+ id = pst.6
+ title = pst.6.title
+ desc = pst.6.desc
+ picture = GFX_report_event_swedish_soldier
+ fire_only_once = yes
+ major = yes
+    trigger = {
+	    tag = SOV
+		GER = { surrender_progress > 0.15 }
+	}
+    mean_time_to_happen = { days = 1}
+	option = {
+	name = pst.5.a
+	ai_chance = { factor = 1}
+	}
+} 
+
+##Event: Endsieg
+country_event = {
+ id = pst.7
+ title = pst.7.title
+ desc = pst.7.desc
+ picture = GFX_DH_Himmler_Hitler
+ fire_only_once = yes
+ major = yes
+ trigger = {
+        tag = GER
+        surrender_progress > 0.10
+	}	mean_time_to_happen = { days = 1}
+	option = {
+		name = pst.7.a
+		ai_chance = { factor = 1}
+		add_timed_idea= { 
+        idea = GER_endsieg 
+        days = 60
+        }
+	}
+}
+
+##Event: Crusade On Bolshevism
+country_event = {
+ id = pst.8
+ title = pst.8.title
+ desc = pst.8.desc
+ picture = GFX_report_event_soviet_army_greeted
+ fire_only_once = yes
+ major = yes
+    trigger = {
+       tag = GER
+	   has_war_with = SOV
+    }	
+	option = {
+		name = pst.8.a
+		ai_chance = { factor = 1}
+		add_timed_idea = { 
+		    idea = GER_crusade_on_bolshevism 
+		    days = 120
+	    }
+		ROM = {
+		    add_timed_idea = { 
+		    idea = GER_crusade_on_bolshevism 
+		    days = 120
+	    }
+		}
+		HUN = {
+		    add_timed_idea = { 
+		    idea = GER_crusade_on_bolshevism 
+		    days = 120
+	    }
+		}
+		SPR = {
+		    add_timed_idea = { 
+		    idea = GER_crusade_on_bolshevism 
+		    days = 120
+	    }
+		}
+		ITA = {
+		    add_timed_idea = { 
+		    idea = GER_crusade_on_bolshevism 
+		    days = 120
+	    }
+		}
+	
+	}
+
+}
+
+
+##Event: Totalen Krieg
+country_event = {
+ id = pst.10
+ title = pst.10.title
+ desc = pst.10.desc
+ picture = GFX_report_event_fascist_gathering
+ fire_only_once = yes
+ major = yes
+	mean_time_to_happen = { days = 30}
+	trigger = {
+       tag = GER
+	   has_war_with = SOV
+	   date > 1943.1.1
+    }	
+	option = {
+		name = pst.10.a
+		ai_chance = { factor = 1}
+	    add_ideas = GER_totalen_krieg
+	}
+}
+
+##Event: Attack On Pearl Harbour
+country_event = {
+ id = pst.11
+ title = pst.11.title
+ desc = pst.11.desc
+ picture = GFX_report_event_usa_pearl_harbor_airphoto
+ fire_only_once = yes
+ major = yes
+	mean_time_to_happen = { days = 1}
+	trigger = {
+	    tag = USA
+		has_war_with = JAP
+	}
+	
+	option = {
+		name = pst.11.a
+		ai_chance = { factor = 1}
+	    add_timed_idea = {
+		    idea = USA_pearl_harbour
+		    days = 90
+	    }
+		add_ideas = USA_real_threat
+		news_event = {
+		    id = pst.16
+		}
+	}
+}
+
+##Event: Szalasy Resistance
+country_event = {
+ id = pst.13
+ title = pst.13.title
+ desc = pst.13.desc
+ picture = GFX_report_event_ger_civil_war
+ fire_only_once = yes
+ major = yes
+	mean_time_to_happen = { days = 1}
+	trigger = {
+	    tag = GER
+		controls_state = 90
+	}
+	
+	option = {
+		name = pst.13.a
+		ai_chance = { factor = 1}
+		add_manpower = -3000
+		add_equipment_to_stockpile = {
+           type = infantry_equipment
+            amount = -3000
+            producer = GER
+        }
+		86  = {
+		    damage_building = {
+			    type = infrastructure
+				damage = 3
+			}
+		}
+		87 = {
+		    damage_building = {
+			    type = infrastructure
+				damage = 3
+			}
+		}
+	}
+}
+
+##Event: Heydrich Assasinated
+country_event = {
+ id = pst.14
+ title = pst.14.title
+ desc = pst.14.desc
+ picture = GFX_report_event_germany_politician_handshake
+ fire_only_once = yes
+ major = yes
+	mean_time_to_happen = { days = 1}
+	trigger = {
+	    tag = GER
+		date > 1941.1.1
+	}
+	option = {
+		name = pst.14.a
+		ai_chance = { factor = 1}
+		add_manpower = -10000
+		add_equipment_to_stockpile = {
+           type = infantry_equipment
+            amount = -1500
+            producer = GER
+        }
+		9 = {
+		    damage_building = {
+			    type = infrastructure
+				damage = 2
+			}
+		}
+	}
+}
+
+# USA Lend Lease Act
+news_event = {
+	id = pst.15
+	title = pst.15.title
+	desc = pst.15.desc
+	picture = GFX_news_event_fdr_and_churchill
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = pst.15.a
+
+	}
+}
+
+# Day Of Infamy
+news_event = {
+	id = pst.16
+	title = pst.16.title
+	desc = pst.16.desc
+	picture = GFX_news_event_fdr_radio
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = pst.16.a
+	}
+}
+
+
+##Event: Partition of Yugoslavia
+country_event = {
+ id = pst.17
+ title = pst.17.title
+ desc = pst.17.desc
+ picture = GFX_report_event_germany_politician_handshake
+ fire_only_once = yes
+ major = yes
+	mean_time_to_happen = { days = 1}
+	trigger = {
+	    tag = GER
+		YUG = {num_divisions < 1}
+	}
+	option = {
+		name = pst.17.a
+		ai_chance = { factor = 1}
+		GER = {
+		    transfer_state = 102
+			transfer_state = 764
+			puppet = SER
+			add_ideas = GER_yugoslav_partisans
+		}
+		HUN = {
+		    transfer_state = 45
+		}
+
+		ITA = {
+		    transfer_state = 105
+			transfer_state = 103
+			transfer_state = 106
+			puppet = CRO
+			
+			add_ideas = GER_yugoslav_partisans
+		}
+		CRO = {
+		    transfer_state = 104
+			transfer_state = 109
+		}
+		SER = {
+		    transfer_state = 107
+			transfer_state = 108
+		}
+		160 = {
+			    add_extra_state_shared_building_slots = 13
+				add_building_construction = {
+					type = industrial_complex
+					level = 9
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			
+		}
+		add_resource = {
+				type = aluminium
+				amount = 10
+				state = 115
+		}
+		add_resource = {
+				type = tungsten
+				amount = 100
+				state = 115
+		}
+		add_resource = {
+				type = aluminium
+				amount = -15
+				state = 104
+		}
+		add_resource = {
+				type = tungsten
+				amount = -135
+				state = 104
+		}
+	}
+}
+
+##Event: Partition of Greece
+country_event = {
+ id = pst.18
+ title = pst.18.title
+ desc = pst.18.desc
+ picture = GFX_report_event_germany_politician_handshake
+ fire_only_once = yes
+ major = yes
+	mean_time_to_happen = { days = 1}
+	trigger = {
+	    tag = GER
+		GRE = {has_capitulated = yes}
+	}
+	option = {
+		name = pst.18.a
+		ai_chance = { factor = 1}
+		GER = {
+		    transfer_state = 731
+		}
+        BUL = {
+		    transfer_state = 184
+		}
+		ITA = {
+		    transfer_state = 47
+			transfer_state = 185
+			transfer_state = 186
+			transfer_state = 187
+		}
+		ENG = {
+		    transfer_state = 182
+		}
+	}
+}
+
+##Event: French Resistance
+country_event = {
+ id = pst.19
+ title = pst.19.title
+ desc = pst.19.desc
+ picture = GFX_report_event_germany_politician_handshake
+ fire_only_once = yes
+ major = yes
+	mean_time_to_happen = { days = 1}
+	trigger = {
+	    tag = GER
+		FRA = {has_capitulated = yes}
+	}
+	option = {
+		name = pst.19.a
+		ai_chance = { factor = 1}
+		GER = {
+		    add_ideas = GER_french_partisans
+		}
+	}
+}
+
+## MOSCOW CAPTURED
+country_event = {
+    id = pst.20
+	title = pst.20.title
+	desc = news.106.d
+	picture = GFX_DH_Himmler_Hitler
+	fire_only_once = yes
+	major = yes
+	mean_time_to_happen = {days = 1}
+	trigger = {
+	    tag = GER
+		NOT = {
+		    219 = {
+				is_owned_and_controlled_by = SOV
+			}
+		}
+	}
+	option = {
+	    name = pst.20.a
+		ai_chance = {factor = 1}
+		GER = {
+		    add_ideas = GER_moscow_captured
+		}
+	}
+}
+
+## Stalingrad CAPTURED
+country_event = {
+    id = pst.21
+	title = pst.21.title
+	desc = news.105.d
+	picture = GFX_DH_Himmler_Hitler
+	fire_only_once = yes
+	major = yes
+	mean_time_to_happen = {days = 1}
+	trigger = {
+	    tag = GER
+		NOT = {
+		    217 = {
+				is_owned_and_controlled_by = SOV
+			}
+		}
+	}
+	option = {
+	    name = pst.21.a
+		ai_chance = {factor = 1}
+		GER = {
+		    add_ideas = GER_stalingrad_captured
+		}
+	}
+}
+
+## Leningrad CAPTURED
+country_event = {
+    id = pst.22
+	title = pst.22.title
+	desc = news.103.d
+	picture = GFX_DH_Himmler_Hitler
+	fire_only_once = yes
+	major = yes
+	mean_time_to_happen = {days = 1}
+	trigger = {
+	    tag = GER
+		NOT = {
+		    195 = {
+				is_owned_and_controlled_by = SOV
+			}
+		}
+	}
+	option = {
+	    name = pst.22.a
+		ai_chance = {factor = 1}
+		GER = {
+		    add_ideas = GER_leningrad_captured
+		}
+	}
+}
+###London Captured
+country_event = {
+    id = pst.23
+	title = pst.23.title
+	desc = pst.23.desc
+	picture = GFX_DH_Foggy_London
+	fire_only_once = yes
+	major = yes
+	mean_time_to_happen = {days = 1}
+	trigger = {
+	    tag = GER
+		NOT = {
+		    126 = {
+				is_controlled_by = ENG
+			}
+		}
+	}
+	option = {
+	    name = pst.23.a
+		ai_chance = {factor = 1}
+	}
+}
+
+###Göring and Halifax
+country_event = {
+    id = pst.24
+	title = pst.24.title
+	desc = pst.24.desc
+	picture = GFX_DH_Halifax_Goering
+	fire_only_once = yes
+	major = yes
+	mean_time_to_happen = {days = 1}
+	trigger = {
+	    tag = GER
+		ENG = {
+		    has_capitulated = yes
+		}
+	}
+	option = {
+	    name = pst.24.a
+		ai_chance = {factor = 1}
+	}
+}

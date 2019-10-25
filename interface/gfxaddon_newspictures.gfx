@@ -1,0 +1,46 @@
+SpriteTypes = {
+    spriteType = {
+		name = "GFX_news_event_fdr_and_churchill"
+		texturefile = "gfx/news_event/news_event_fdr_and_churchill.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_news_event_008_gfxnews"
+		texturefile = "gfx/news_event/news_event_008_gfxnews.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_news_event_fdr_radio"
+		texturefile = "gfx/news_event/news_event_fdr_radio.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_DH_Foggy_London"
+		texturefile = "gfx/event_pictures/DH_Foggy_London.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_DH_Halifax_Goering"
+		texturefile = "gfx/event_pictures/DH_Halifax_Goering.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_DH_Himmler_Hitler"
+		texturefile = "gfx/event_pictures/DH_Himmler_Hitler.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_DH_Nazi_in_London"
+		texturefile = "gfx/event_pictures/DH_Nazi_in_London.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_GER_Autobahn_Ceremony"
+		texturefile = "gfx/event_pictures/report_GER_Autobahn_Ceremony.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_GER_Werner_Heisenberg"
+		texturefile = "gfx/event_pictures/report_GER_Werner_Heisenberg.dds"
+	}
+}

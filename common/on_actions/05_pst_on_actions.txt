@@ -1,0 +1,124 @@
+on_actions = {
+	
+     on_startup = {
+     effect = {
+
+    
+   
+    
+   # they are deleted in diffrent days to prevent desync  caused by their sudden deletion
+     if = {
+
+      limit = {
+	  AND = {
+       
+		GER = { is_ai = no }
+    
+		}
+      }
+      USA = { add_timed_idea = { idea = human_shall_not_lag_idea  days = 1095 } }
+      CAN = { add_timed_idea = { idea = human_shall_not_lag_idea  days = 732 } }
+      RAJ = { add_timed_idea = { idea = human_shall_not_lag_idea  days = 734 } }
+      SAF = { add_timed_idea = { idea = human_shall_not_lag_idea  days = 736 } }
+      NZL = { add_timed_idea = { idea = human_shall_not_lag_idea  days = 740 } }
+      AST = { add_timed_idea = { idea = human_shall_not_lag_idea  days = 738 } }
+      ENG = { add_timed_idea = { idea = human_shall_not_lag_idea  days = 365 } }
+      FRA = { add_timed_idea = { idea = human_shall_not_lag_idea  days = 600 } }
+      SOV = { add_timed_idea = { idea = human_shall_not_lag_idea  days = 882 } }
+      FIN = { add_timed_idea = { idea = human_shall_not_lag_idea  days = 884 } }
+      HUN = { add_timed_idea = { idea = human_shall_not_lag_idea  days = 750 } }
+      ROM = { add_timed_idea = { idea = human_shall_not_lag_idea  days = 748 } }
+      BUL = { add_timed_idea = { idea = human_shall_not_lag_idea  days = 752 } } 
+#     SPR = { add_timed_idea = { idea = human_shall_not_lag_idea  days = 754 } }
+      ITA = { add_timed_idea = { idea = human_shall_not_lag_idea  days = 646 } }
+      GER = { add_timed_idea = { idea = human_shall_not_lag_idea  days = 420 } }
+      JAP = { add_timed_idea = { idea = human_shall_not_lag_idea  days = 1100 } }
+      POL = { add_timed_idea = { idea = human_shall_not_lag_idea  days = 500 } }
+	  NOR = { add_timed_idea = { idea = human_shall_not_lag_idea  days = 500 } }
+	  DEN = { add_timed_idea = { idea = human_shall_not_lag_idea  days = 500 } }
+	  LIT = { add_timed_idea = { idea = human_shall_not_lag_idea  days = 730 } }
+      LAT = { add_timed_idea = { idea = human_shall_not_lag_idea  days = 730 } }
+	  EST = { add_timed_idea = { idea = human_shall_not_lag_idea  days = 730 } } 
+      PER = { add_timed_idea = { idea = human_shall_not_lag_idea  days = 730 } }
+	  AUS = { add_timed_idea = { idea = human_shall_not_lag_idea  days = 300 } }
+      CZE = { add_timed_idea = { idea = human_shall_not_lag_idea  days = 300 } } 
+	  HOL = { add_timed_idea = { idea = human_shall_not_lag_idea  days = 730 } } 
+      BEL = { add_timed_idea = { idea = human_shall_not_lag_idea  days = 730 } } 
+	  ALB = { add_timed_idea = { idea = human_shall_not_lag_idea  days = 350 } }  	 
+	  SIA = { add_timed_idea = { idea = human_shall_not_lag_idea  days = 350 } } 	  
+	  GRE = { add_timed_idea = { idea = human_shall_not_lag_idea  days = 350 } } 
+	  YUG = { add_timed_idea = { idea = human_shall_not_lag_idea  days = 350 } } 
+	  CHI = { add_timed_idea = { idea = human_shall_not_lag_idea  days = 1100 } }
+	  MAN = { add_timed_idea = { idea = human_shall_not_lag_idea  days = 1100 } }
+	  }
+
+         
+
+           
+        }
+
+    }
+	
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { has_global_flag = GDU_dday_started }				
+					date > 1941.1.1
+					OR = {
+						original_tag = USA
+						original_tag = ENG
+						original_tag = CAN
+						original_tag = SAF
+						original_tag = RAJ
+						original_tag = NZL
+						original_tag = AST
+						original_tag = FRF
+						original_tag = HOL
+						original_tag = BEL
+						original_tag = LUX
+						original_tag = DEN												
+					}
+					OR = {
+						controls_state = 735 # Savoy
+						controls_state = 21 # Provence
+						controls_state = 18 # Languedoc
+						controls_state = 31 # Midi Pyrenees
+						controls_state = 19 # Aquitane
+						controls_state = 23 # Poitou
+						controls_state = 30 # Loire
+						controls_state = 14 # Brittany
+						controls_state = 15 # Normandy
+						controls_state = 785 # Picardy
+						controls_state = 29 # Nord-Pas-de-Calais
+						controls_state = 6 # Vlaandern
+						controls_state = 7 # Holland
+						controls_state = 36 # Friesland
+						controls_state = 56 # Weser-Ems
+						controls_state = 59 # Hannover
+						controls_state = 58 # Schleswig-Holstein
+						controls_state = 99 # Jutland
+						controls_state = 61 # Mecklenburg
+						controls_state = 62 # Vorpommern
+						controls_state = 63 # Hinterpommern
+						controls_state = 85 # Danzig
+						controls_state = 788 # East Prussia
+						controls_state = 763 # Konigsberg
+					}	
+								
+						
+					}
+				
+				hidden_effect = {
+					set_global_flag = GDU_dday_started
+					GER = { 
+						activate_mission = GER_defeat_dday					
+					}
+				}
+			}
+			}
+
+			
+		}
+
+}

@@ -1,0 +1,16 @@
+
+state={
+	id=345
+	name="STATE_345" # Mersin
+	manpower = 1
+
+	state_category = rural
+
+	history={
+		
+	}
+
+	provinces={
+		1122 4008 4124 4127 7026 7143 10056 
+	}
+}

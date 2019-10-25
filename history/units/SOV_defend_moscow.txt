@@ -1,0 +1,248 @@
+division_template = {
+                   name = "Guards Rifle Division"
+				   division_names_group = SOV_INF_01
+                   regiments = {
+                        infantry = { x = 0 y = 0 }
+                        infantry = { x = 0 y = 1 }
+                        infantry = { x = 0 y = 2 }
+                        infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						
+                        infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 1 y = 3 }
+						infantry = { x = 1 y = 4 }
+                    }
+                    support = { 
+						artillery = {x = 0 y = 1}
+						anti_tank = {x = 0 y = 2}
+						anti_air = {x = 0 y = 3}
+						engineer = {x = 0 y = 0}
+                    } 
+                }
+units = {
+    division = {
+	    name = "1.Guards Rifle Division"
+	    location = 9242
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "2.Guards Rifle Division"
+	    location = 11224
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "3.Guards Rifle Division"
+	    location = 11224
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "4.Guards Rifle Division"
+	    location = 9265
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "5.Guards Rifle Division"
+	    location = 9265
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "6.Guards Rifle Division"
+	    location = 11349
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "7.Guards Rifle Division"
+	    location = 11349
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "8.Guards Rifle Division"
+	    location = 6303
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "9.Guards Rifle Division"
+	    location = 11326
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "10.Guards Rifle Division"
+	    location = 6245
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "11.Guards Rifle Division"
+	    location = 6122
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "12.Guards Rifle Division"
+	    location = 366
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "13.Guards Rifle Division"
+	    location = 401
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "14.Guards Rifle Division"
+	    location = 9302
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "15.Guards Rifle Division"
+	    location = 9302
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "16.Guards Rifle Division"
+	    location = 3327
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "17.Guards Rifle Division"
+	    location = 3391
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "18.Guards Rifle Division"
+	    location = 3391
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "19.Guards Rifle Division"
+	    location = 6348
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "20.Guards Rifle Division"
+	    location = 11282
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "21.Guards Rifle Division"
+	    location = 6380
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "22.Guards Rifle Division"
+	    location = 6380
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "23.Guards Rifle Division"
+	    location = 6380
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "24.Guards Rifle Division"
+	    location = 6414
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "25.Guards Rifle Division"
+	    location = 6414
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "26.Guards Rifle Division"
+	    location = 6290
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "27.Guards Rifle Division"
+	    location = 9348
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "28.Guards Rifle Division"
+	    location = 301
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "29.Guards Rifle Division"
+	    location = 9282
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "30.Guards Rifle Division"
+	    location = 11330
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "31.Guards Rifle Division"
+	    location = 350
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "32.Guards Rifle Division"
+	    location = 6396
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "33.Guards Rifle Division"
+	    location = 11347
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "34.Guards Rifle Division"
+	    location = 3236
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "35.Guards Rifle Division"
+	    location = 9366
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "36.Guards Rifle Division"
+	    location = 6262
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "37.Guards Rifle Division"
+	    location = 6262
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "38.Guards Rifle Division"
+	    location = 3292
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "39.Guards Rifle Division"
+	    location = 3292
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "40.Guards Rifle Division"
+	    location = 283
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "41.Guards Rifle Division"
+	    location = 11314
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "42.Guards Rifle Division"
+	    location = 397
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "43.Guards Rifle Division"
+	    location = 11248
+	    division_template = "Guards Rifle Division"
+    }
+	division = {
+	    name = "44.Guards Rifle Division"
+	    location = 269
+	    division_template = "Guards Rifle Division"
+    }
+	
+	
+
+}

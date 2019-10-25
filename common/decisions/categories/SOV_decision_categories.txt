@@ -1,0 +1,41 @@
+################
+#### SOVIET ####
+################
+
+
+SOV_great_patriotic_war = {
+	allowed = {
+		original_tag = SOV
+	}
+	visible = {
+		has_war = yes
+	}
+    icon = sov_great_patriotic_war
+	picture = GFX_decision_cat_picture_patriotic_war
+}
+
+SOV_kulaks_collectivization = {
+    allowed = {
+	    original_tag = SOV
+	}
+	visible = {
+	    always = yes
+	}
+	icon = generic_propaganda
+}
+
+SOV_industry_relocation = {
+	
+	allowed = {
+		original_tag = SOV
+	}
+
+	available = {
+		has_completed_focus = SOV_move_industry_to_urals
+	}
+
+	visible = {
+		has_war = yes
+	}
+}
+

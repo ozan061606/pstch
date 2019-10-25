@@ -1,0 +1,17 @@
+spriteTypes = {
+
+	SpriteType = {
+		name = "GFX_desertinfantry_at3_medium"
+		texturefile = "gfx/interface/technologies/desertinfantry3.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_desertinfantry_at2_medium"
+		texturefile = "gfx/interface/technologies/desertinfantry2.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_desertinfantry_at_medium"
+		texturefile = "gfx/interface/technologies/desertinfantry.dds"
+	}
+}

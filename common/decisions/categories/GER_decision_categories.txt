@@ -1,0 +1,48 @@
+#################
+#### GERMANY ####
+#################
+
+GER_eastern_front_category = {
+    allowed = {
+	    original_tag = GER
+	}
+	icon = generic_fascism
+	picture = GFX_decision_cat_picture_eastern_front
+	visible = {
+	    has_war_with = SOV
+	}
+}
+
+GER_vemork_hydroelectric_plant_category = {
+    icon = ger_reichskommissariats
+	allowed = {
+	    original_tag = GER
+	}
+	visible = {
+	    always = yes
+	}
+}
+
+GER_endsieg_category = {
+    icon = ger_reichskommissariats
+	
+	picture = GFX_decision_cat_picture_generic_endsieg
+	
+	allowed = {
+	    original_tag = GER
+	}
+    visible = {
+	    has_war_with = SOV
+	}
+}
+
+GER_mefo_bills_category = {
+	icon = ger_mefo_bills
+
+	picture = GFX_decision_cat_generic_adolf
+
+	allowed = {
+		original_tag = GER
+	}
+}
+

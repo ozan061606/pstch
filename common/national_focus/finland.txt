@@ -1,0 +1,808 @@
+focus_tree = {
+    id = finland_focus
+    country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = FIN
+		}
+	}
+    default = no
+	
+	focus = {
+	    id = FIN_government_reform
+		icon = GFX_goal_flag_finland
+		x = 3
+		y = 0
+		cost = 10
+		completion_reward = {
+		    add_political_power = 120
+			add_stability = 0.1
+		}
+    }
+	focus = {
+	    id = FIN_anti_bolshevik_policy
+		prerequisite = { focus = FIN_government_reform }
+		icon = GFX_HOL_red_scare
+		relative_position_id = FIN_government_reform
+		x = -1
+		y = 1
+		cost = 10
+	    completion_reward = {
+		    add_ideas = FIN_anti_bolshevik_policy_idea
+			add_stability = 0.05
+		}
+	}
+	focus = {
+	    id = FIN_seek_german_friendship
+		prerequisite = { focus = FIN_government_reform}
+		icon = GFX_focus_chi_mission_to_germany
+		relative_position_id = FIN_anti_bolshevik_policy
+		x = 2
+		y = 0
+		cost = 10
+		completion_reward = {
+		    add_political_power = 120
+		}
+	}
+	focus = {
+        id = FIN_finnish_national_guards
+		text = " Finnish National Guards"
+		prerequisite = { focus = FIN_finland_reborn }
+		x = 0
+	    y = 6
+		cost = 5
+		icon = GFX_goal_demand_sudetenland
+	    completion_reward = {
+		   
+			    division_template = {
+				    name = "National Guard"
+					priority = 1
+					division_names_group = FIN_INF_01
+					regiments = {
+					    infantry    = { x = 0 y = 0}
+						infantry    = { x = 0 y = 1}
+						infantry    = { x = 0 y = 2}
+						infantry    = { x = 0 y = 3}
+						infantry    = { x = 0 y = 4}
+						
+
+						
+						
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+
+					}
+					
+				}
+				111 = {
+				    prioritize = { 11105 }
+					create_unit = {
+						division = "name = \"1. National Guard\" division_template = \"National Guard\" start_experience_factor = 0.9" 
+						owner = FIN
+					}
+					create_unit = {
+						division = "name = \"2. National Guard\" division_template = \"National Guard\" start_experience_factor = 0.9" 
+						owner = FIN
+					}
+					create_unit = {
+						division = "name = \"3. National Guard\" division_template = \"National Guard\" start_experience_factor = 0.9" 
+						owner = FIN
+					}
+					create_unit = {
+						division = "name = \"4. National Guard\" division_template = \"National Guard\" start_experience_factor = 0.9" 
+						owner = FIN
+					}
+					create_unit = {
+						division = "name = \"5. National Guard\" division_template = \"National Guard\" start_experience_factor = 0.9" 
+						owner = FIN
+					}
+					create_unit = {
+						division = "name = \"6. National Guard\" division_template = \"National Guard\" start_experience_factor = 0.9" 
+						owner = FIN
+					}
+					create_unit = {
+						division = "name = \"7. National Guard\" division_template = \"National Guard\" start_experience_factor = 0.9" 
+						owner = FIN
+					}
+					create_unit = {
+						division = "name = \"8. National Guard\" division_template = \"National Guard\" start_experience_factor = 0.9" 
+						owner = FIN
+					}
+					create_unit = {
+						division = "name = \"8. National Guard\" division_template = \"National Guard\" start_experience_factor = 0.9" 
+						owner = FIN
+					}
+					create_unit = {
+						division = "name = \"8. National Guard\" division_template = \"National Guard\" start_experience_factor = 0.9" 
+						owner = FIN
+					}
+					create_unit = {
+						division = "name = \"8. National Guard\" division_template = \"National Guard\" start_experience_factor = 0.9" 
+						owner = FIN
+					}
+					create_unit = {
+						division = "name = \"8. National Guard\" division_template = \"National Guard\" start_experience_factor = 0.9" 
+						owner = FIN
+					}
+					create_unit = {
+						division = "name = \"8. National Guard\" division_template = \"National Guard\" start_experience_factor = 0.9" 
+						owner = FIN
+					}
+					create_unit = {
+						division = "name = \"8. National Guard\" division_template = \"National Guard\" start_experience_factor = 0.9" 
+						owner = FIN
+					}
+					create_unit = {
+						division = "name = \"8. National Guard\" division_template = \"National Guard\" start_experience_factor = 0.9" 
+						owner = FIN
+					}
+					create_unit = {
+						division = "name = \"8. National Guard\" division_template = \"National Guard\" start_experience_factor = 0.9" 
+						owner = FIN
+					}
+					create_unit = {
+						division = "name = \"8. National Guard\" division_template = \"National Guard\" start_experience_factor = 0.9" 
+						owner = FIN
+					}
+					create_unit = {
+						division = "name = \"8. National Guard\" division_template = \"National Guard\" start_experience_factor = 0.9" 
+						owner = FIN
+					}
+					create_unit = {
+						division = "name = \"8. National Guard\" division_template = \"National Guard\" start_experience_factor = 0.9" 
+						owner = FIN
+					}
+					create_unit = {
+						division = "name = \"8. National Guard\" division_template = \"National Guard\" start_experience_factor = 0.9" 
+						owner = FIN
+					}
+					
+					
+				}
+			
+		}
+	
+	}
+	
+	focus = {
+		id = FIN_push_the_red
+		text = "Push The Reds Out Of Our Country!"
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = FIN_finland_reborn}
+		
+		x = 6
+		y = 6
+		cost = 5
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				any_claim = yes
+				has_war = yes
+			}
+		}
+
+
+		
+		completion_reward = {
+				add_timed_idea = {
+					idea = push_reds
+					days = 90
+				}
+				
+			}
+		}
+			
+
+			
+		
+	
+	focus = {
+	    id = FIN_invite_german_engineers
+		prerequisite = { focus = FIN_seek_german_friendship}
+		relative_position_id = FIN_seek_german_friendship
+		icon = GFX_focus_chi_mission_to_germany
+		x = 2
+		y = 1
+		cost = 5
+		completion_reward = {
+		    add_ideas = FIN_invited_german_engineers
+		}
+	}
+	focus = {
+	    id = FIN_invite_german_scientist
+		prerequisite = { focus = FIN_seek_german_friendship}
+		relative_position_id = FIN_seek_german_friendship
+		icon = GFX_focus_chi_mission_to_germany
+		x = 4
+		y = 1
+		cost = 5
+		completion_reward = {
+		    add_ideas = FIN_invited_german_scientists
+
+		}
+	
+	}
+	focus = {
+	    id = FIN_fortify_the_soviet_border
+		prerequisite = { focus = FIN_anti_bolshevik_policy}
+		relative_position_id = FIN_anti_bolshevik_policy
+		x = 0
+		y = 2
+		icon = GFX_goal_demobilization
+		cost = 10
+		completion_reward = {
+		    146 = {
+				custom_effect_tooltip = FIN_fortify_border
+				hidden_effect = {
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 3060
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 9150
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 9206
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 11162
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = 3050
+						instant_build = yes
+					}
+					
+				}
+			}
+		}
+	}
+	focus = {
+	    id = FIN_finnish_neutrality
+		prerequisite = { focus = FIN_seek_german_friendship}
+		relative_position_id = FIN_seek_german_friendship
+		x = 0
+		y = 2
+		cost = 10
+		icon = GFX_goal_HOL_sustain_neutrality
+		completion_reward = {
+		    add_ideas = FIN_finnish_neutrality_idea
+			add_political_power = 120
+			add_stability = 0.15
+		}
+	}
+	focus = {
+	    id = FIN_public_education
+		prerequisite = {focus = FIN_finnish_neutrality}
+		relative_position_id = FIN_finnish_neutrality
+		x = 2
+		y = 1
+		icon = GFX_goal_double_research
+		completion_reward = {
+		    add_research_slot = 1
+		}
+		cost = 10
+	
+	}
+	focus = {
+	    id = FIN_aftermath_of_the_winter_war
+		prerequisite = { focus = FIN_fortify_the_soviet_border focus = FIN_finnish_neutrality }
+		relative_position_id = FIN_government_reform
+		x = 0
+		y = 4
+		available = {
+		    SOV = {
+			    controls_state = 146
+			}
+		}
+		cost = 10
+		icon = GFX_goal_conspiracy
+		completion_reward = {
+            add_popularity = {
+                ideology = fascism
+                popularity = 0.15
+            }
+			add_war_support = 0.25
+		}
+	}
+	focus = {
+	    id = FIN_finland_reborn
+		prerequisite = {focus = FIN_aftermath_of_the_winter_war}
+		relative_position_id = FIN_aftermath_of_the_winter_war
+		x = 0 
+		y = 1
+		cost = 10
+		icon = GFX_goal_finnish_spirit
+		completion_reward = {
+		    set_politics = {
+			    ruling_party = fascism
+			}
+			add_popularity = {
+                ideology = fascism
+                popularity = 0.35
+            }
+			swap_ideas = {
+                remove_idea = FIN_finnish_neutrality_idea
+                add_idea = FIN_ideals_for_a_greater_finland
+            }
+
+		}
+	}
+	
+	focus = {
+	    id = FIN_reclaim_lost_territories
+		prerequisite = {focus = FIN_finland_reborn}
+		relative_position_id = FIN_aftermath_of_the_winter_war
+		x = 0
+		y = 2
+		cost = 1
+		icon = GFX_goal_national_populism
+		available = {
+		    date > 1941.6.25
+		}
+		completion_reward = {
+		    create_wargoal = {
+                type = puppet_wargoal_focus
+                target = SOV
+            }
+		}
+	}
+	
+	
+	focus = {
+	    id = FIN_industrial_innovations
+		x = 12
+		y = 0
+		cost = 10
+		icon = GFX_goal_construction
+		completion_reward = {
+		    add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 1.5
+				uses = 1
+				technology = construction3
+			}
+			add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 1.5
+				uses = 1
+				technology = construction4
+			}
+		
+		}
+	}
+
+	focus = {
+	    id = FIN_civilian_development
+		prerequisite = { focus = FIN_industrial_innovations}
+		relative_position_id = FIN_industrial_innovations
+		x = 3
+		y = 1
+		cost = 10
+		icon = GFX_focus_generic_industry_1
+		completion_reward = {
+			111 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2IC
+			}
+			
+		}
+		
+	}
+	
+	focus = {
+	    id = FIN_civilian_development_2
+		prerequisite = { focus = FIN_civilian_development}
+		relative_position_id = FIN_civilian_development
+		x = 0
+		y = 1
+		cost = 10
+		icon = GFX_focus_generic_industry_2
+		completion_reward = {
+			149 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2IC
+			}
+			
+		}
+	}
+	
+	focus = {
+	    id = FIN_civilian_development_3
+		prerequisite = { focus = FIN_civilian_development_2}
+		relative_position_id = FIN_civilian_development
+		x = 0
+		y = 2
+		cost = 10
+		icon = GFX_focus_generic_industry_3
+		completion_reward = {
+			148 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2IC
+			}
+			
+		}
+	}
+	focus = {
+	    id = FIN_military_development
+		prerequisite = { focus = FIN_industrial_innovations}
+		relative_position_id = FIN_industrial_innovations
+		x = 0
+		y = 1
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		completion_reward = {
+			111 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2IC
+			}
+			
+		}
+		
+	}
+	focus = {
+	    id = FIN_military_development_2
+		prerequisite = { focus = FIN_military_development}
+		relative_position_id = FIN_military_development
+		x = 0
+		y = 1
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		completion_reward = {
+			149 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2IC
+			}
+			
+		}
+		
+	}
+	focus = {
+	    id = FIN_military_development_3
+		prerequisite = { focus = FIN_military_development_2}
+		relative_position_id = FIN_military_development
+		x = 0
+		y = 2
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		completion_reward = {
+			148 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2IC
+			}
+			
+		}
+		
+	}
+	focus = {
+	    id = FIN_infrastructure_effort
+		prerequisite = { focus = FIN_industrial_innovations}
+		relative_position_id = FIN_industrial_innovations
+		x = -3
+		y = 1
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10
+		completion_reward = {
+			148 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2IC
+			}
+			111 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2IC
+			}
+			149 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2IC
+			}
+			
+		}
+		
+	}
+	
+	
+	focus = {
+	    id = FIN_finnish_army_focus
+		x = 20
+		y = 0
+		icon = GFX_goal_SWE_pansartrupperna
+		cost = 10
+		completion_reward = {
+		    army_experience = 50
+		}
+	}
+	
+	focus = {
+	    id = FIN_motti_tactics
+		prerequisite = { focus = FIN_finnish_army_focus}
+		relative_position_id = FIN_finnish_army_focus
+		x = -2
+		y = 1
+		icon = GFX_GEA_counter_insurgency
+		cost = 10
+		completion_reward = {
+		    add_ideas = FIN_motti_tactics_idea
+			army_experience = 25
+		}
+	}
+	focus = {
+	    id = FIN_develop_suomi_kp31
+		prerequisite = { focus = FIN_finnish_army_focus}
+		relative_position_id = FIN_motti_tactics
+		x = 2
+		y = 0
+		icon = GFX_goal_SWE_army
+		cost = 5
+		completion_reward = {
+		    add_tech_bonus = {
+			    bonus = 2
+				technology = improved_infantry_weapons 
+			}
+		}
+		
+	}
+	focus = {
+	    id = FIN_artillery_development
+		prerequisite = { focus = FIN_finnish_army_focus}
+		relative_position_id = FIN_motti_tactics
+		x = 6
+		y = 0
+		cost = 10
+		icon = GFX_goal_artillery
+        completion_reward = {
+		    add_tech_bonus = {
+			    bonus = 1
+				uses = 3
+				category = artillery
+			}
+		}
+	}
+	focus = {
+	    id = FIN_antitank_development
+		prerequisite = { focus = FIN_finnish_army_focus}
+		relative_position_id = FIN_motti_tactics
+		x = 4
+		y = 0
+		cost = 5
+		icon = GFX_goal_anti_tank
+        completion_reward = {
+		    add_tech_bonus = {
+			    bonus = 1.5
+				technology = antitank5
+			}
+		}
+	}
+	focus = {
+	    id = FIN_antiair_development
+		prerequisite = { focus = FIN_finnish_army_focus}
+		relative_position_id = FIN_motti_tactics
+		x = 8
+		y = 0
+		cost = 5
+		icon = GFX_goal_anti_air
+        completion_reward = {
+		    add_tech_bonus = {
+			    bonus = 1.5
+				technology = antiair5
+			}
+		}
+	}
+	focus = {
+	    id = FIN_invite_german_military_advisors
+		prerequisite = {focus = FIN_finnish_army_focus}
+		relative_position_id = FIN_motti_tactics
+		x = 10
+		y = 0
+		cost = 10
+		icon = GFX_goal_German_Staff
+		available = {
+		    date > 1939.1.1
+		}
+		completion_reward = {
+		    add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1
+				uses = 4
+				category = land_doctrine
+			}
+	    }
+	}
+	focus = {
+	    id = FIN_study_mobile_warfare
+		prerequisite = {focus = FIN_invite_german_military_advisors}
+		relative_position_id = FIN_invite_german_military_advisors
+		x = 0
+		y = 1
+		cost = 10
+		icon = GFX_goal_light_tanks
+		completion_reward = {
+		    add_tech_bonus = {
+				bonus = 2
+				uses = 2
+				category = armor
+			}
+		}
+	}
+    focus = {
+	    id = FIN_improve_support_companies
+		prerequisite = {focus = FIN_develop_suomi_kp31}
+		relative_position_id = FIN_develop_suomi_kp31
+		x = 0
+		y = 1
+		cost = 5
+		icon = GFX_goal_radio
+		completion_reward = {
+		    add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = support_tech
+			}
+		} 
+		
+	}
+	
+	focus = {
+	    id = FIN_demand_equipment_support_from_germany
+		prerequisite = {focus = FIN_artillery_development}
+		prerequisite = {focus = FIN_invite_german_military_advisors}
+		prerequisite = {focus = FIN_develop_suomi_kp31}
+		relative_position_id = FIN_artillery_development
+		available = {
+		    has_war_with = SOV
+			date > 1941.1.1
+		}
+		x = 0
+		y = 1
+		cost = 5
+		icon = GFX_goal_mittel_arms_trade
+		completion_reward = {
+		    add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 5000 producer = GER }
+		    add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 750 producer = GER }
+			add_equipment_to_stockpile = { type = support_equipment_1 amount = 500 producer = GER }
+			
+		}
+	}
+	focus = {
+	    id = FIN_deploy_ski_infantry
+		prerequisite = {focus = FIN_motti_tactics}
+	    relative_position_id = FIN_motti_tactics
+		available = {
+		    has_war_with = SOV
+		}
+		x = 0
+		y = 1
+		cost = 1
+		icon = GFX_goal_NOR_quisling_guard
+		completion_reward = {
+		        custom_effect_tooltip = FIN_deploy_ski_infantry_tt
+		        hidden_effect = {
+					division_template = {
+						name = "Ski-Infantry"
+						priority = 2
+						division_names_group = FIN_INF_01
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+				
+		    	   		 	infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+				
+		    	   		 	infantry = { x = 2 y = 0 }
+							infantry = { x = 2 y = 1 }
+							infantry = { x = 2 y = 2 }
+							infantry = { x = 2 y = 3 }
+							
+							
+						}
+						support = {
+							engineer = { x = 0 y = 0 }
+							recon = { x = 0 y = 1 }
+						}
+					}
+					random_owned_controlled_state = {
+					    limit = { ROOT = { has_full_control_of_state = PREV } }
+					    prioritize = { 11105 }
+					    create_unit = {
+						    division = "name = \"1. Ski-Infantry Division\" division_template = \"Ski-Infantry\" start_experience_factor = 1.0" 
+						    owner = FIN
+					    }
+					    create_unit = {
+						    division = "name = \"2. Ski-Infantry Division\" division_template = \"Ski-Infantry\" start_experience_factor = 1.0" 
+						    owner = FIN
+					    }
+						create_unit = {
+						    division = "name = \"3. Ski-Infantry Division\" division_template = \"Ski-Infantry\" start_experience_factor = 1.0" 
+						    owner = FIN
+					    }
+				    }
+					
+				}
+		}
+	}
+
+	
+		focus = {
+	    id = FIN_demand_fighter_support_from_germany
+		prerequisite = {focus = FIN_demand_equipment_support_from_germany}
+		relative_position_id = FIN_artillery_development
+		x = 0
+		y = 2
+		cost = 5
+		icon = GFX_goal_recall_mittel_mission
+		completion_reward = {
+		    add_equipment_to_stockpile = { type = fighter_equipment_1 amount = 400 producer = GER }
+		}
+	}
+	
+	
+	
+
+
+
+
+
+
+
+
+
+}
