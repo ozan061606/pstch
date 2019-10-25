@@ -465,11 +465,11 @@ create_field_marshal = {
 create_field_marshal = {
 	name = "Bernard Montgomery"
 	picture = "Portrait_Britain_Bernard_Montgomery.dds"
-	traits = { logistics_wizard infantry_leader offensive_doctrine media_personality trait_cautious inflexible_strategist organizer }
-	skill = 4 
-	attack_skill = 3
-	defense_skill = 4
-	planning_skill = 3
+	traits = { panzer_leader logistics_wizard infantry_leader offensive_doctrine media_personality trait_cautious inflexible_strategist organizer }
+	skill = 6 
+	attack_skill = 5
+	defense_skill = 5
+	planning_skill = 6
 	logistics_skill = 4
 }
 

@@ -12,7 +12,24 @@ focus_tree = {
 	
 	default = no
 
-
+	focus = {
+        id = SOV_artillery_focus
+		text = "Soviet ML-20"
+		prerequisite = { focus = SOV_peoples_commissariat }
+		x = 0
+	    y = 3
+		relative_position_id = SOV_peoples_commissariat 
+		cost = 10
+		icon = GFX_SOV_B4
+	    completion_reward = {
+		    add_tech_bonus = {
+                bonus = 2
+                uses = 2
+                category = artillery
+            }
+		}
+	
+	}
 	focus = {
         id = SOV_great_patriotic_war_speech
 		x = 9

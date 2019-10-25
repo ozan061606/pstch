@@ -328,13 +328,13 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Giovanni Messe"
 	picture = "Portrait_Italy_Giovanni_Messe.dds"
-	traits = { war_hero desert_fox skilled_staffer infantry_leader }
-	skill = 4
+	traits = { infantry_leader war_hero desert_fox skilled_staffer infantry_leader }
+	skill = 6
 	rank = 1
-	attack_skill = 4
-	defense_skill = 3
-	planning_skill = 2
-	logistics_skill = 4
+	attack_skill = 5
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 5
 }
 
 create_corps_commander = {

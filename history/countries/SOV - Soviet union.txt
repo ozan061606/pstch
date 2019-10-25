@@ -353,14 +353,14 @@ create_field_marshal = {
 	name = "Georgy Zhukov"
 	id = 410
 		picture = "Portrait_Soviet_Gregory_Zhukov.dds"
-	traits = { winter_specialist organizer skilled_staffer expert_delegator urban_assault_specialist armor_officer media_personality war_hero }
-	skill = 5
+	traits = { infantry_leader winter_specialist organizer skilled_staffer expert_delegator urban_assault_specialist armor_officer media_personality war_hero }
+	skill = 6
 
 	
-	attack_skill = 3
-	defense_skill = 5
-	planning_skill = 5
-	logistics_skill = 5
+	attack_skill = 7
+	defense_skill = 6
+	planning_skill = 6
+	logistics_skill = 8
 }
 create_corps_commander = {
 	name = "Semyon Krivoshein"
