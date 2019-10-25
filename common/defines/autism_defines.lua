@@ -53,7 +53,7 @@ NDefines.NProduction.ANNEX_FIELD_EQUIPMENT_RATIO = 1.0
 NDefines.NProduction.CAPITAL_SHIP_MAX_NAV_FACTORIES_PER_LINE = 10
 NDefines.NProduction.MIN_NAVAL_EQUIPMENT_CONVERSION_IC_COST_FACTOR = 0.1	-- Minimum fraction of an equipment type's base industry capacity cost to use when converting a naval equipment, such as through ship refitting.
 NDefines.NProduction.MIN_NAVAL_EQUIPMENT_CONVERSION_RESOURCE_COST_FACTOR = 0.1
-NDefines.NTechnology.BASE_RESEARCH_POINTS_SAVED = 45.0  -- increased from 45 to 55 8/3/2019
+NDefines.NTechnology.BASE_RESEARCH_POINTS_SAVED = 46.0  -- increased from 45 to 55 8/3/2019
 NDefines.NFocus.MAX_SAVED_FOCUS_PROGRESS = 10  -- increased from 15 to 35 8/3/2019
 
 ---Military
