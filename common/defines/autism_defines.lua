@@ -97,8 +97,8 @@ NDefines.NNavy.SHIP_TO_FLEET_ANTI_AIR_RATIO = 0.01 --- (0.2 -> 0.01)
 NDefines.NNavy.ANTI_AIR_MULT_ON_INCOMING_AIR_DAMAGE = 0.07 --- (0.15 -> 0.07)
 NDefines.NNavy.MAX_ANTI_AIR_REDUCTION_EFFECT_ON_INCOMING_AIR_DAMAGE = 0.8 --- (0.5 -> 0.8)
 
-NDefines.NNavy.HIGHER_SHIP_RATIO_POSITIONING_PENALTY_FACTOR    = 0.3 -- if one side has more ships than the other, that side will get this penalty for each +100% ship ratio it has
-NDefines.NNavy.MAX_POSITIONING_PENALTY_FROM_HIGHER_SHIP_RATIO = 0.7  -- maximum penalty to get from larger fleets
+NDefines.NNavy.HIGHER_SHIP_RATIO_POSITIONING_PENALTY_FACTOR    = 1.0 -- if one side has more ships than the other, that side will get this penalty for each +100% ship ratio it has
+NDefines.NNavy.MAX_POSITIONING_PENALTY_FROM_HIGHER_SHIP_RATIO = 1.5  -- maximum penalty to get from larger fleets
 NDefines.NNavy.MAX_POSITIONING_PENALTY_FOR_NEWLY_JOINED_SHIPS = 0.0  -- the accumulated penalty from new ships will be clamped to this value
 NDefines.NNavy.DAMAGE_PENALTY_ON_MINIMUM_POSITIONING = 0.8    -- damage penalty at 0% positioning
 NDefines.NNavy.SCREENING_EFFICIENCY_PENALTY_ON_MINIMUM_POSITIONING = 0.8   -- screening efficiency (screen to capital ratio) at 0% positioning
@@ -123,18 +123,28 @@ NDefines.NNavy.MISSION_SPREADS = {  -- mission spreads in the case a ship join c
 }
 NDefines.NNavy.CONVOY_SINKING_SPILLOVER = 0.5 ---Vanilla value may need to change
 NDefines.NNavy.ANTI_AIR_ATTACK_TO_AMOUNT = 0.003    -- Balancing value to convert equipment stat anti_air_attack to the random % value of airplanes being hit.
-NDefines.NNavy.SUBMARINE_REVEAL_POW = 5.0        -- A scaling factor that is applied to the reveal chance in order to make large differences in detection vs visibility more pronounced
+NDefines.NNavy.SUBMARINE_REVEAL_POW = 5.0
+NDefines.NNavy.SUBMARINE_BASE_TORPEDO_REVEAL_CHANCE                             = 0.5
+NDefines.NNavy.NAVAL_COMBAT_AIR_SUB_DETECTION_INTERNAL_EFFICIENCY_FACTOR = 3.0
 
 NDefines.NNavy.COMBAT_DAMAGE_TO_STR_FACTOR = 0.25    -- casting damage value to ship strength multiplier. Use it ot balance the game difficulty.
 NDefines.NNavy.COMBAT_DAMAGE_TO_ORG_FACTOR = 0.8    -- casting damage value to ship organisation multiplier. Use it to balance the game difficulty.
 NDefines.NNavy.MAX_ORG_ON_MANUAL_MOVE = 1.0    -- org will clamped to this ratio on manual move
 
 NDefines.NNavy.UNIT_TRANSFER_DETECTION_CHANCE_BASE = 2.0  -- unit transfer and naval invasion base chance detection percentage (if this fails, no detection is done on that tick)
+NDefines.NNavy.COMBAT_ARMOR_PIERCING_DAMAGE_REDUCTION = -0.95
 NDefines.NNavy.GUN_HIT_PROFILES = { -- hit profiles for guns, if target ih profile is lower the gun will have lower accuracy
-        90.0,    -- big guns
+        60.0,    -- big guns
         145.0,    -- torpedos
         40.0,    -- small guns
     }
+
+NDefines.NNavy.BASE_GUN_COOLDOWNS = { -- number of hours for a gun to be ready after shooting
+        1.5,    -- big guns
+        8.0,    -- torpedos
+        3.0,    -- small guns
+    }
+
 NDefines.NNavy.ORG_COST_WHILE_MOVING = { -- org cost while the ships are moving
         0.4, -- HOLD
         0.4, -- PATROL
