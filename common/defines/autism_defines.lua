@@ -90,24 +90,27 @@ NDefines.NProduction.EQUIPMENT_MODULE_CONVERT_XP_COST = 0.0				-- XP cost for co
 NDefines.NProduction.EQUIPMENT_MODULE_REMOVE_XP_COST = 0.0				-- XP cost for removing an equipment module and leaving the slot empty when creating an equipment variant.
 
 NDefines.NNavy.LEADER_EXPERIENCE_SCALE = 0.5
-NDefines.NNavy.SCREEN_RATIO_FOR_FULL_SCREENING_FOR_CAPITALS = 3.0
+NDefines.NNavy.SCREEN_RATIO_FOR_FULL_SCREENING_FOR_CAPITALS = 4.0
 
 NDefines.NNavy.ANTI_AIR_POW_ON_INCOMING_AIR_DAMAGE = 0.8 --- (0.2 -> 0.8)
-NDefines.NNavy.SHIP_TO_FLEET_ANTI_AIR_RATIO = 0.01 --- (0.2 -> 0.01)
+NDefines.NNavy.SHIP_TO_FLEET_ANTI_AIR_RATIO = 0.04 --- (0.2 -> 0.01)
 NDefines.NNavy.ANTI_AIR_MULT_ON_INCOMING_AIR_DAMAGE = 0.07 --- (0.15 -> 0.07)
 NDefines.NNavy.MAX_ANTI_AIR_REDUCTION_EFFECT_ON_INCOMING_AIR_DAMAGE = 0.8 --- (0.5 -> 0.8)
+NDefines.NNavy.NAVAL_STRIKE_CARRIER_MULTIPLIER = 13.0 
 
 NDefines.NNavy.HIGHER_SHIP_RATIO_POSITIONING_PENALTY_FACTOR    = 1.0 -- if one side has more ships than the other, that side will get this penalty for each +100% ship ratio it has
 NDefines.NNavy.MAX_POSITIONING_PENALTY_FROM_HIGHER_SHIP_RATIO = 1.5  -- maximum penalty to get from larger fleets
 NDefines.NNavy.MAX_POSITIONING_PENALTY_FOR_NEWLY_JOINED_SHIPS = 0.0  -- the accumulated penalty from new ships will be clamped to this value
 NDefines.NNavy.DAMAGE_PENALTY_ON_MINIMUM_POSITIONING = 0.8    -- damage penalty at 0% positioning
 NDefines.NNavy.SCREENING_EFFICIENCY_PENALTY_ON_MINIMUM_POSITIONING = 0.8   -- screening efficiency (screen to capital ratio) at 0% positioning
+NDefines.NNavy.AA_EFFICIENCY_PENALTY_ON_MINIMUM_POSITIONING = 0.7
+NDefines.NNavy.SHORE_BOMBARDMENT_CAP = 0.3
 
 NDefines.NNavy.COMBAT_ARMOR_PIERCING_CRITICAL_BONUS = 1.5 -- Bonus to critical chance when shooter armor piercing is higher then target armor.
 NDefines.NNavy.PRIDE_OF_THE_FLEET_UNASSIGN_COST = 0 -- cost to unassign/replace pride of the fleet
 
 NDefines.NNavy.CARRIER_STACK_PENALTY = 5 -- The most efficient is 4 carriers in combat. 5+ brings the penalty to the amount of wings in battle.
-NDefines.NNavy.CARRIER_STACK_PENALTY_EFFECT = 0.167 -- Each carrier above the optimal amount decreases the amount of airplanes being able to takeoff by such %.
+NDefines.NNavy.CARRIER_STACK_PENALTY_EFFECT = 0.25 -- Each carrier above the optimal amount decreases the amount of airplanes being able to takeoff by such %.
 NDefines.NNavy.COMBAT_MIN_DURATION = 12
 NDefines.NNavy.MISSION_SPREADS = {  -- mission spreads in the case a ship join combat, whih defines their starting position
         0.0, -- HOLD 
@@ -123,7 +126,7 @@ NDefines.NNavy.MISSION_SPREADS = {  -- mission spreads in the case a ship join c
 }
 NDefines.NNavy.CONVOY_SINKING_SPILLOVER = 0.5 ---Vanilla value may need to change
 NDefines.NNavy.ANTI_AIR_ATTACK_TO_AMOUNT = 0.003    -- Balancing value to convert equipment stat anti_air_attack to the random % value of airplanes being hit.
-NDefines.NNavy.SUBMARINE_REVEAL_POW = 5.0
+NDefines.NNavy.SUBMARINE_REVEAL_POW = 6.0
 NDefines.NNavy.SUBMARINE_BASE_TORPEDO_REVEAL_CHANCE                             = 0.5
 NDefines.NNavy.NAVAL_COMBAT_AIR_SUB_DETECTION_INTERNAL_EFFICIENCY_FACTOR = 3.0
 
@@ -196,12 +199,12 @@ NDefines.NAir.AIR_DEPLOYMENT_DAYS = 1							-- Days to deploy one air wing
 NDefines.NAir.ACE_EARN_CHANCE_BASE = 0.01                        -- Base chance % for ace pilot to be created. Happens only when successfully kill airplane/ship or damage the buildings.
 NDefines.NAir.COMBAT_DAMAGE_SCALE = 0.07  -- Higher value = more shot down planes base 0.1
 NDefines.NAir.ANTI_AIR_PLANE_DAMAGE_CHANCE = 0.6 -- 0.1 base Anti Air Gun hit chance
-NDefines.NAir.AIR_WING_MAX_SIZE = 1600
+NDefines.NAir.AIR_WING_MAX_SIZE = 6400
 NDefines.NAir.ACE_WING_SIZE_MAX_BONUS = 1
 NDefines.NAir.STRATEGIC_BOMBER_NUKE_AIR_SUPERIORITY = 0.90
-NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_STR = 1.0
+NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_STR = 2.0
 NDefines.NAir.NAVAL_KAMIKAZE_DAMAGE_MULT = 5.0  -- vanilla is like 20
-NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_ORG = 1.0
+NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_ORG = 3.0
 NDefines.NAir.AA_INDUSTRY_AIR_DAMAGE_FACTOR = -0.12 -- -0.12	5x levels = 60% defense from bombing
 NDefines.NAir.EFFICIENCY_REGION_CHANGE_DAILY_GAIN_TACTICAL_BOMBER =	0.1	-- base 0.192 How much efficiency to regain per day. Gain applied hourly.
 NDefines.NAir.AIR_COMBAT_FINAL_DAMAGE_SCALE = 0.1 -- 0.015	 % how many max disrupted only planes are allowed to die in a single combat
