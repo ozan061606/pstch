@@ -2,15 +2,22 @@
 
 oob = "BUL_1936"
 
+set_convoys = 10
+set_war_support = 0.25
+set_stability = 0.55
 set_research_slots = 3
 
 add_ideas = {
-	limited_conscription
-}
+	volunteer_only
+	BUL_shattered_military
+	BUL_fledgeling_military_industry
+	BUL_fascists_in_government
+	}
 
 set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
+	gwtank = 1
 	tech_support = 1		
 	tech_engineers = 1
 	motorised_infantry = 1
@@ -46,9 +53,6 @@ set_technology = {
 		support_weapons = 1
 
 		#doctrines
-		#Air
-		force_rotation = 1
-		fighter_baiting = 1
 				
 		grand_battle_plan = 1
 		trench_warfare = 1
@@ -74,9 +78,24 @@ set_technology = {
 		dispersed_industry2 = 1
 	}
 }
+### VARIABLES ###
+set_variable = {
+    var = BUL.macedonian_support
+    value = 0
+}
+set_variable = {
+    var = BUL.croatian_support
+    value = 0
+}
+set_variable = {
+    var = BUL.bosnian_support
+    value = 0
+}
 
-set_convoys = 5
-
+set_variable = {
+    var = BUL.slovenian_support
+    value = 0
+}
 set_politics = {	
 	ruling_party = neutrality
 	last_election = "1931.6.21"
@@ -84,12 +103,12 @@ set_politics = {
 	elections_allowed = no
 }
 
-set_popularities = {
-    democratic = 5
-    fascism = 35
-    communism = 0
-    neutrality = 60
-}
+  set_popularities = {
+	  neutrality = 70
+	  fascism = 5
+	  communism = 10
+	  democratic = 15
+  }
 
 1939.1.1 = {
 	set_politics = {	
@@ -110,11 +129,11 @@ set_popularities = {
 create_country_leader = {
 	name = "Boris III"
 	desc = "POLITICS_BORIS_III_DESC"
-	picture = "Portrait_Bulgaria_Boris_III.dds"
+	picture = "r56_portrait_BUL_boris_iii.tga"
 	expire = "1965.1.1"
 	ideology = despotism
 	traits = {
-		#
+		BUL_tsar_of_bulgaria
 	}
 }
 
