@@ -7,6 +7,10 @@ spriteTypes = {
 		name = "GFX_antitank"
 		texturefile = "gfx/interface/goals/antitank.dds"			
 	}
+	SpriteType = { 
+		name = "GFX_focus_BUL_bulgarisation"
+		texturefile = "gfx/interface/goals/focus_BUL_bulgarisation.dds"
+	}
 	spriteType = {
 		name = "GFX_sca_focus_blue_navy"
 		texturefile = "gfx/interface/goals/generic/r56_goal_generic_blue_navy.dds"
@@ -893,8 +897,38 @@ spriteTypes = {
 		name = "GFX_goal_rocket"
 		texturefile = "gfx/interface/goals/goal_rocket.tga"
 	}
+	
+	SpriteType = {
+		name = "GFX_goal_women_industry"
+		texturefile = "gfx/interface/goals/goal_women_industry.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_IRE_women_industry"
+		texturefile = "gfx/interface/goals/IRE_women_industry.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_DAH_Agaja"
+		texturefile = "gfx/interface/goals/DAH_Agaja.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_All_resource"
+		texturefile = "gfx/interface/goals/All_resource.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_generic_modernizing_the_cavalry"
+		texturefile = "gfx/interface/goals/goal_generic_modernizing_the_cavalry.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_r56_goal_generic_tank_map"
+		texturefile = "gfx/interface/goals/r56_goal_generic_tank_map.dds"
+	}
 
 
-
+}
 
 
