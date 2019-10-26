@@ -65,6 +65,7 @@ if = {
 }
  add_ideas = {
 	free_trade
+	partial_economic_mobilisation
   
 }
 
