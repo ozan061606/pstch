@@ -739,7 +739,7 @@ equipments = {
 		carrier_capable = yes
 		priority = 70
 		
-		air_range = 800
+		air_range = 600
 		maximum_speed =	230
 		air_agility = 30
 		air_attack = 6
@@ -756,7 +756,7 @@ equipments = {
 		carrier_capable = yes
 		priority = 70
 		
-		air_range = 1000
+		air_range = 750
 		maximum_speed =	270
 		air_agility = 35
 		air_attack = 10
